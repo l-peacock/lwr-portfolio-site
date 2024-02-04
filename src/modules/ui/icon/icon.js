@@ -1,22 +1,32 @@
 import { LightningElement, api } from "lwc";
 
-import { library, icon } from "@fortawesome/fontawesome-svg-core";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { icon } from "@fortawesome/fontawesome-svg-core";
+import {
+	faLinkedin as linkedin,
+	faGithub as github,
+	faSalesforce as salesforce,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default class Icon extends LightningElement {
-	_prefix = "fa";
-	_iconName = "globe";
+	iconDefinitions = {
+		linkedin,
+		github,
+		salesforce,
+	};
 
-	// globe;
-
-	connectedCallback() {
-		library.add(faGlobe);
+	@api
+	get iconName() {
+		return this._iconName;
+	}
+	set iconName(value) {
+		this._iconName = value;
+		this.iconDef = this.iconDefinitions[value];
 	}
 
-	renderedCallback() {
-		let globe = icon({ prefix: this._prefix, iconName: this._iconName });
-		console.log(globe);
+	_iconName;
+	iconDef;
 
-		Array.from(globe.node).map((n) => this.template.appendChild(n));
+	connectedCallback() {
+		this.template.appendChild(icon(this.iconDef).node[0]);
 	}
 }
