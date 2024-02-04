@@ -1,3 +1,7 @@
+:host {
+	max-width: 800px;
+}
+
 h1 {
 	font-weight: 400;
 	border-left: solid rgba(190, 190, 190, 0.808) 4px;

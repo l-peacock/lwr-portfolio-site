@@ -1,22 +1,11 @@
 <template>
-	<!-- Make sure you refer to semantic elements here: https://www.w3schools.com/html/html5_semantic_elements.asp -->
 	<header>
-		<ui-banner
-			title={CONTENT.BANNER_CONTENT.title}
-			subtitle={CONTENT.BANNER_CONTENT.subtitle}
-			show-background-image
-		></ui-banner>
+		<ui-banner show-background-image></ui-banner>
 	</header>
 	<main>
 		<section>
 			<ui-content-block></ui-content-block>
 		</section>
-		<aside>
-			<ui-content-card
-				title="I'm an aside!"
-				text="lorem ipsum yadda yadda yadda"
-			></ui-content-card>
-		</aside>
 	</main>
 	<footer>
 		<ui-footer></ui-footer>

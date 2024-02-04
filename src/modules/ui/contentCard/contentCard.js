@@ -16,7 +16,7 @@ export default class ContentCard extends LightningElement {
 
 	/**
 	 * The title of the card
-	 * @type {string} text | link | image
+	 * @type {string} text
 	 * @default text
 	 */
 	@api
@@ -29,7 +29,7 @@ export default class ContentCard extends LightningElement {
 
 	/**
 	 * The text content of the card
-	 * @type {string} text | link | image
+	 * @type {string}
 	 * @default text
 	 */
 	@api
@@ -42,10 +42,6 @@ export default class ContentCard extends LightningElement {
 
 	get isText() {
 		return this.type === "text";
-	}
-
-	get isLink() {
-		return this.type === "link";
 	}
 
 	_type = "text";

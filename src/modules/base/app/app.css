@@ -20,9 +20,10 @@ main {
 	flex-direction: column;
 	width: auto;
 	flex-grow: 1;
-	align-items: baseline;
+	align-items: flex-start;
 	max-width: 1400px;
 	align-self: center;
+	margin: 0rem 0.5rem 0rem 0.5rem;
 }
 
 section {
