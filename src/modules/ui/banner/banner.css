@@ -1,0 +1,89 @@
+:host {
+	background-color: rgb(250, 250, 250);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0.5rem 1rem 0.5rem;
+	transition: all 200ms ease-in-out;
+	height: 20rem;
+	background-image: url("public/assets/banner-background.JPG");
+	background-size: cover;
+	background-position-x: left;
+	background-position-y: center;
+	background-clip: border-box;
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 1.75rem;
+	transition: all 200ms ease-in-out;
+}
+
+/* Typewriter effect referred to here: https://css-tricks.com/snippets/css/typewriter-effect/ */
+.typewriter h1 {
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: 0.1em solid orange; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	text-align: left;
+	font-family: monospace;
+	letter-spacing: 0.2em; /* Adjust as needed */
+	animation:
+		typing 4s steps(14, end),
+		blink-caret 0.75s step-end infinite;
+	color: antiquewhite;
+}
+
+.typewriter {
+	background-color: rgba(0, 0, 0, 0.822);
+	padding: 1rem;
+	width: fit-content;
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 1.5rem;
+	font-family: monospace;
+	background-color: rgba(255, 255, 255, 0.808);
+	width: fit-content;
+	padding: 0 0.5rem 0 0.5rem;
+}
+
+img {
+	max-height: 10rem;
+	border-radius: 2rem;
+	align-self: flex-end;
+}
+
+@media only screen and (min-width: 769px) {
+	:host {
+		padding: 2rem 4rem 2rem 4rem;
+		background-position-y: top;
+		height: 30rem;
+	}
+
+	h1 {
+		font-weight: 400;
+		font-size: 3rem;
+	}
+}
+/* The typing effect */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: rgb(249, 96, 30);
+	}
+}
