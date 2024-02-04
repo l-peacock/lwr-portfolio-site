@@ -7,7 +7,7 @@
 	padding: 1rem 0.5rem 1rem 0.5rem;
 	transition: all 200ms ease-in-out;
 	height: 20rem;
-	background-image: url("public/assets/banner-background.JPG");
+	background-image: url("public/assets/banner-background.webp");
 	background-size: cover;
 	background-position-x: left;
 	background-position-y: center;
@@ -67,6 +67,13 @@ img {
 		font-size: 3rem;
 	}
 }
+
+@media only screen and (min-width: 1600px) {
+	:host {
+		background-position-y: center; /* This keeps the image sensibly positoned at larger widths */
+	}
+}
+
 /* The typing effect */
 @keyframes typing {
 	from {
