@@ -70,7 +70,9 @@ Open the site at [http://localhost:3000](http://localhost:3000)
 
 ## Publishing Changes to GitHub Pages
 
-This application is served on GitHub pages. Create a new build of the app (see below), and move the output into the `/docs/` directory.
+This application is served on GitHub pages. It will serve the build in the `docs/` directory in the `main` branch.
+
+Create a new build of the app (see below), and move the output into the `docs/` directory.
 
 ```bash
 yarn build:prod-compat
