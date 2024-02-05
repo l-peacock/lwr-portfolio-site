@@ -15,7 +15,7 @@ Object.assign(globalThis.LWR, {
 			],
 		"/1/bundle/amd/l/en-US/bi/0/module/mi/lwc%2Fv%2F5_0_0/s/b005bb4c2c907fd35a0797f2b8899108a9a5b779/bundle_lwc.js":
 			["lwc/v/5_0_0"],
-		"/1/bundle/amd/l/en-US/bi/0/module/mi/base%2Fapp%2Fv%2F0_0_1/s/f10da68c34c03bbbe54ca65093aef3405f03f9b8/bundle_base_app.js":
+		"/1/bundle/amd/l/en-US/bi/0/module/mi/base%2Fapp%2Fv%2F0_0_1/s/60e5830d07bcb7f6a8aa557b50e80eef234c2ceb/bundle_base_app.js":
 			[
 				"base/app/v/0_0_1",
 				"@fortawesome/free-brands-svg-icons/v/6_5_1",
