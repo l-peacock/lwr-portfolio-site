@@ -45,7 +45,7 @@ h2 {
 	font-size: 1.5rem;
 	font-family: monospace;
 	background-color: rgba(255, 255, 255, 0.808);
-	width: fit-content;
+	width: min-content;
 	padding: 0 0.5rem 0 0.5rem;
 }
 
@@ -65,6 +65,10 @@ img {
 	h1 {
 		font-weight: 400;
 		font-size: 3rem;
+	}
+
+	h2 {
+		width: fit-content;
 	}
 }
 
@@ -91,6 +95,18 @@ img {
 		border-color: transparent;
 	}
 	50% {
-		border-color: rgb(249, 96, 30);
+		border-color: rgba(249, 96, 30, 0.747);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:host {
+		background-color: #14131b7c;
+		background-blend-mode: overlay;
+	}
+
+	h2 {
+		background-color: rgba(40, 40, 40, 0.239);
+		color: #eee;
 	}
 }

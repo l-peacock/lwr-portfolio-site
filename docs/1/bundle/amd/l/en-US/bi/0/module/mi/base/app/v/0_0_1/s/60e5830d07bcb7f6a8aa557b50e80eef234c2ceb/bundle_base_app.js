@@ -15,7 +15,7 @@ LWR.define(
 					"M352 384h108.4C417 455.9 338.1 504 248 504S79 455.9 35.6 384H144V256.2L248 361l104-105v128zM88 336V128l159.4 159.4L408 128v208h74.8c8.5-25.1 13.2-52 13.2-80C496 119 385 8 248 8S0 119 0 256c0 28 4.6 54.9 13.2 80H88z",
 				],
 			},
-			w = {
+			x = {
 				prefix: "fab",
 				iconName: "hooli",
 				icon: [
@@ -48,7 +48,7 @@ LWR.define(
 					"M470.1 231.3s7.6 37.2 9.3 45H446c3.3-8.9 16-43.5 16-43.5-.2.3 3.3-9.1 5.3-14.9l2.8 13.4zM576 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM152.5 331.2L215.7 176h-42.5l-39.3 106-4.3-21.5-14-71.4c-2.3-9.9-9.4-12.7-18.2-13.1H32.7l-.7 3.1c15.8 4 29.9 9.8 42.2 17.1l35.8 135h42.5zm94.4.2L272.1 176h-40.2l-25.1 155.4h40.1zm139.9-50.8c.2-17.7-10.6-31.2-33.7-42.3-14.1-7.1-22.7-11.9-22.7-19.2.2-6.6 7.3-13.4 23.1-13.4 13.1-.3 22.7 2.8 29.9 5.9l3.6 1.7 5.5-33.6c-7.9-3.1-20.5-6.6-36-6.6-39.7 0-67.6 21.2-67.8 51.4-.3 22.3 20 34.7 35.2 42.2 15.5 7.6 20.8 12.6 20.8 19.3-.2 10.4-12.6 15.2-24.1 15.2-16 0-24.6-2.5-37.7-8.3l-5.3-2.5-5.6 34.9c9.4 4.3 26.8 8.1 44.8 8.3 42.2.1 69.7-20.8 70-53zM528 331.4L495.6 176h-31.1c-9.6 0-16.9 2.8-21 12.9l-59.7 142.5H426s6.9-19.2 8.4-23.3H486c1.2 5.5 4.8 23.3 4.8 23.3H528z",
 				],
 			},
-			A = {
+			P = {
 				prefix: "fab",
 				iconName: "lastfm",
 				icon: [
@@ -114,7 +114,7 @@ LWR.define(
 					"M91.3 76h186l-7 18.9h-179c-39.7 0-71.9 31.6-71.9 70.3v205.4c0 35.4 24.9 70.3 84 70.3V460H91.3C41.2 460 0 419.8 0 370.5V165.2C0 115.9 40.7 76 91.3 76zm229.1-56h66.5C243.1 398.1 241.2 418.9 202.2 459.3c-20.8 21.6-49.3 31.7-78.3 32.7v-51.1c49.2-7.7 64.6-49.9 64.6-75.3 0-20.1.6-12.6-82.1-223.2h61.4L218.2 299 320.4 20zM448 161.5V460H234c6.6-9.6 10.7-16.3 12.1-19.4h182.5V161.5c0-32.5-17.1-51.9-48.2-62.9l6.7-17.6c41.7 13.6 60.9 43.1 60.9 80.5z",
 				],
 			},
-			x = {
+			q = {
 				prefix: "fab",
 				iconName: "cloudflare",
 				icon: [
@@ -125,7 +125,7 @@ LWR.define(
 					"M407.906,319.913l-230.8-2.928a4.58,4.58,0,0,1-3.632-1.926,4.648,4.648,0,0,1-.494-4.147,6.143,6.143,0,0,1,5.361-4.076L411.281,303.9c27.631-1.26,57.546-23.574,68.022-50.784l13.286-34.542a7.944,7.944,0,0,0,.524-2.936,7.735,7.735,0,0,0-.164-1.631A151.91,151.91,0,0,0,201.257,198.4,68.12,68.12,0,0,0,94.2,269.59C41.924,271.106,0,313.728,0,366.12a96.054,96.054,0,0,0,1.029,13.958,4.508,4.508,0,0,0,4.445,3.871l426.1.051c.043,0,.08-.019.122-.02a5.606,5.606,0,0,0,5.271-4l3.273-11.265c3.9-13.4,2.448-25.8-4.1-34.9C430.124,325.423,420.09,320.487,407.906,319.913ZM513.856,221.1c-2.141,0-4.271.062-6.391.164a3.771,3.771,0,0,0-3.324,2.653l-9.077,31.193c-3.9,13.4-2.449,25.786,4.1,34.89,6.02,8.4,16.054,13.323,28.238,13.9l49.2,2.939a4.491,4.491,0,0,1,3.51,1.894,4.64,4.64,0,0,1,.514,4.169,6.153,6.153,0,0,1-5.351,4.075l-51.125,2.939c-27.754,1.27-57.669,23.574-68.145,50.784l-3.695,9.606a2.716,2.716,0,0,0,2.427,3.68c.046,0,.088.017.136.017h175.91a4.69,4.69,0,0,0,4.539-3.37,124.807,124.807,0,0,0,4.682-34C640,277.3,583.524,221.1,513.856,221.1Z",
 				],
 			},
-			P = {
+			k = {
 				prefix: "fab",
 				iconName: "ups",
 				icon: [
@@ -136,7 +136,7 @@ LWR.define(
 					"M103.2 303c-5.2 3.6-32.6 13.1-32.6-19V180H37.9v102.6c0 74.9 80.2 51.1 97.9 39V180h-32.6zM4 74.82v220.9c0 103.7 74.9 135.2 187.7 184.1 112.4-48.9 187.7-80.2 187.7-184.1V74.82c-116.3-61.6-281.8-49.6-375.4 0zm358.1 220.9c0 86.6-53.2 113.6-170.4 165.3-117.5-51.8-170.5-78.7-170.5-165.3v-126.4c102.3-93.8 231.6-100 340.9-89.8zm-209.6-107.4v212.8h32.7v-68.7c24.4 7.3 71.7-2.6 71.7-78.5 0-97.4-80.7-80.92-104.4-65.6zm32.7 117.3v-100.3c8.4-4.2 38.4-12.7 38.4 49.3 0 67.9-36.4 51.8-38.4 51zm79.1-86.4c.1 47.3 51.6 42.5 52.2 70.4.6 23.5-30.4 23-50.8 4.9v30.1c36.2 21.5 81.9 8.1 83.2-33.5 1.7-51.5-54.1-46.6-53.4-73.2.6-20.3 30.6-20.5 48.5-2.2v-28.4c-28.5-22-79.9-9.2-79.7 31.9z",
 				],
 			},
-			V = {
+			H = {
 				prefix: "fab",
 				iconName: "pixiv",
 				icon: [
@@ -191,7 +191,7 @@ LWR.define(
 					"M244.6 232.4c0 8.5-4.26 20.49-21.34 20.49h-19.61v-41.47h19.61c17.13 0 21.34 12.36 21.34 20.98zM448 32v448H0V32zM151.3 287.84c0-21.24-12.12-34.54-46.72-44.85-20.57-7.41-26-10.91-26-18.63s7-14.61 20.41-14.61c14.09 0 20.79 8.45 20.79 18.35h30.7l.19-.57c.5-19.57-15.06-41.65-51.12-41.65-23.37 0-52.55 10.75-52.55 38.29 0 19.4 9.25 31.29 50.74 44.37 17.26 6.15 21.91 10.4 21.91 19.48 0 15.2-19.13 14.23-19.47 14.23-20.4 0-25.65-9.1-25.65-21.9h-30.8l-.18.56c-.68 31.32 28.38 45.22 56.63 45.22 29.98 0 51.12-13.55 51.12-38.29zm125.38-55.63c0-25.3-18.43-45.46-53.42-45.46h-51.78v138.18h32.17v-47.36h19.61c30.25 0 53.42-15.95 53.42-45.36zM297.94 325L347 186.78h-31.09L268 325zm106.52-138.22h-31.09L325.46 325h29.94z",
 				],
 			},
-			k = {
+			w = {
 				prefix: "fab",
 				iconName: "buysellads",
 				icon: [
@@ -202,7 +202,7 @@ LWR.define(
 					"M224 150.7l42.9 160.7h-85.8L224 150.7zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-65.3 325.3l-94.5-298.7H159.8L65.3 405.3H156l111.7-91.6 24.2 91.6h90.8z",
 				],
 			},
-			X = {
+			$ = {
 				prefix: "fab",
 				iconName: "first-order",
 				icon: [
@@ -235,7 +235,7 @@ LWR.define(
 					"M443.427,64H4.571c0,103.26,22.192,180.06,43.418,222.358C112.046,414.135,224,448,225.256,448a312.824,312.824,0,0,0,140.55-103.477c25.907-33.923,53.1-87.19,65.916-145.761H171.833c4.14,36.429,22.177,67.946,45.1,86.944h88.589c-17.012,28.213-48.186,54.4-80.456,69.482-31.232-13.259-69.09-46.544-96.548-98.362-26.726-53.833-27.092-105.883-27.092-105.883H437.573A625.91,625.91,0,0,0,443.427,64Z",
 				],
 			},
-			J = {
+			B = {
 				prefix: "fab",
 				iconName: "vnv",
 				icon: [
@@ -258,7 +258,7 @@ LWR.define(
 				],
 			},
 			S = l1,
-			q = {
+			A = {
 				prefix: "fab",
 				iconName: "microsoft",
 				icon: [
@@ -512,7 +512,7 @@ LWR.define(
 					"M205.9 512l31.1-38.4c12.3-.2 25.6-1.4 36.5-6.6 38.9-18.6 38.4-61.9 38.3-63.8-.1-5-.8-4.4-28.9-37.4H362c-.2 50.1-7.3 68.5-10.2 75.7-9.4 23.7-43.9 62.8-95.2 69.4-8.7 1.1-32.8 1.2-50.7 1.1zm200.4-167.7c38.6 0 58.5-13.6 73.7-30.9l-175.5-.3-17.4 31.3 119.2-.1zm-43.6-223.9v168.3h-73.5l-32.7 55.5H250c-52.3 0-58.1-56.5-58.3-58.9-1.2-13.2-21.3-11.6-20.1 1.8 1.4 15.8 8.8 40 26.4 57.1h-91c-25.5 0-110.8-26.8-107-114V16.9C0 .9 9.7.3 15 .1h82c.2 0 .3.1.5.1 4.3-.4 50.1-2.1 50.1 43.7 0 13.3 20.2 13.4 20.2 0 0-18.2-5.5-32.8-15.8-43.7h84.2c108.7-.4 126.5 79.4 126.5 120.2zm-132.5 56l64 29.3c13.3-45.5-42.2-71.7-64-29.3z",
 				],
 			},
-			H = {
+			V = {
 				prefix: "fab",
 				iconName: "brave",
 				icon: [
@@ -790,7 +790,7 @@ LWR.define(
 					"M274.69,274.69l-37.38-37.38L166,346ZM256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8ZM411.85,182.79l14.78-6.13A8,8,0,0,1,437.08,181h0a8,8,0,0,1-4.33,10.46L418,197.57a8,8,0,0,1-10.45-4.33h0A8,8,0,0,1,411.85,182.79ZM314.43,94l6.12-14.78A8,8,0,0,1,331,74.92h0a8,8,0,0,1,4.33,10.45l-6.13,14.78a8,8,0,0,1-10.45,4.33h0A8,8,0,0,1,314.43,94ZM256,60h0a8,8,0,0,1,8,8V84a8,8,0,0,1-8,8h0a8,8,0,0,1-8-8V68A8,8,0,0,1,256,60ZM181,74.92a8,8,0,0,1,10.46,4.33L197.57,94a8,8,0,1,1-14.78,6.12l-6.13-14.78A8,8,0,0,1,181,74.92Zm-63.58,42.49h0a8,8,0,0,1,11.31,0L140,128.72A8,8,0,0,1,140,140h0a8,8,0,0,1-11.31,0l-11.31-11.31A8,8,0,0,1,117.41,117.41ZM60,256h0a8,8,0,0,1,8-8H84a8,8,0,0,1,8,8h0a8,8,0,0,1-8,8H68A8,8,0,0,1,60,256Zm40.15,73.21-14.78,6.13A8,8,0,0,1,74.92,331h0a8,8,0,0,1,4.33-10.46L94,314.43a8,8,0,0,1,10.45,4.33h0A8,8,0,0,1,100.15,329.21Zm4.33-136h0A8,8,0,0,1,94,197.57l-14.78-6.12A8,8,0,0,1,74.92,181h0a8,8,0,0,1,10.45-4.33l14.78,6.13A8,8,0,0,1,104.48,193.24ZM197.57,418l-6.12,14.78a8,8,0,0,1-14.79-6.12l6.13-14.78A8,8,0,1,1,197.57,418ZM264,444a8,8,0,0,1-8,8h0a8,8,0,0,1-8-8V428a8,8,0,0,1,8-8h0a8,8,0,0,1,8,8Zm67-6.92h0a8,8,0,0,1-10.46-4.33L314.43,418a8,8,0,0,1,4.33-10.45h0a8,8,0,0,1,10.45,4.33l6.13,14.78A8,8,0,0,1,331,437.08Zm63.58-42.49h0a8,8,0,0,1-11.31,0L372,383.28A8,8,0,0,1,372,372h0a8,8,0,0,1,11.31,0l11.31,11.31A8,8,0,0,1,394.59,394.59ZM286.25,286.25,110.34,401.66,225.75,225.75,401.66,110.34ZM437.08,331h0a8,8,0,0,1-10.45,4.33l-14.78-6.13a8,8,0,0,1-4.33-10.45h0A8,8,0,0,1,418,314.43l14.78,6.12A8,8,0,0,1,437.08,331ZM444,264H428a8,8,0,0,1-8-8h0a8,8,0,0,1,8-8h16a8,8,0,0,1,8,8h0A8,8,0,0,1,444,264Z",
 				],
 			},
-			Y = {
+			U = {
 				prefix: "fab",
 				iconName: "google",
 				icon: [
@@ -978,7 +978,7 @@ LWR.define(
 					"M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z",
 				],
 			},
-			B = {
+			W = {
 				prefix: "fab",
 				iconName: "git-alt",
 				icon: [
@@ -2531,7 +2531,7 @@ LWR.define(
 					"M248 8C111 8 0 119.1 0 256c0 137 111 248 248 248s248-111 248-248C496 119.1 385 8 248 8zm0 449.5c-139.2 0-235.8-138-190.2-267.9l78.8 35.1c-2.1 10.5-3.3 21.5-3.3 32.9 0 99 73.9 126.9 120.4 126.9 22.9 0 53.5-6.7 79.4-29.5L297 311.1c-5.5 6.3-17.6 16.7-36.3 16.7-37.8 0-53.7-39.9-53.9-71.9 230.4 102.6 216.5 96.5 217.9 96.8-34.3 62.4-100.6 104.8-176.7 104.8zm194.2-150l-224-100c18.8-34 54.9-30.7 74.7-11l40.4-41.6c-27.1-23.3-58-27.5-78.1-27.5-47.4 0-80.9 20.5-100.7 51.6l-74.9-33.4c36.1-54.9 98.1-91.2 168.5-91.2 111.1 0 201.5 90.4 201.5 201.5 0 18-2.4 35.4-6.8 52-.3-.1-.4-.2-.6-.4z",
 				],
 			},
-			W = {
+			Y = {
 				prefix: "fab",
 				iconName: "playstation",
 				icon: [
@@ -2542,7 +2542,7 @@ LWR.define(
 					"M570.9 372.3c-11.3 14.2-38.8 24.3-38.8 24.3L327 470.2v-54.3l150.9-53.8c17.1-6.1 19.8-14.8 5.8-19.4-13.9-4.6-39.1-3.3-56.2 2.9L327 381.1v-56.4c23.2-7.8 47.1-13.6 75.7-16.8 40.9-4.5 90.9.6 130.2 15.5 44.2 14 49.2 34.7 38 48.9zm-224.4-92.5v-139c0-16.3-3-31.3-18.3-35.6-11.7-3.8-19 7.1-19 23.4v347.9l-93.8-29.8V32c39.9 7.4 98 24.9 129.2 35.4C424.1 94.7 451 128.7 451 205.2c0 74.5-46 102.8-104.5 74.6zM43.2 410.2c-45.4-12.8-53-39.5-32.3-54.8 19.1-14.2 51.7-24.9 51.7-24.9l134.5-47.8v54.5l-96.8 34.6c-17.1 6.1-19.7 14.8-5.8 19.4 13.9 4.6 39.1 3.3 56.2-2.9l46.4-16.9v48.8c-51.6 9.3-101.4 7.3-153.9-10z",
 				],
 			},
-			$ = {
+			X = {
 				prefix: "fab",
 				iconName: "quinscape",
 				icon: [
@@ -2575,7 +2575,7 @@ LWR.define(
 					"M446.6 222.7c-1.8-8-6.8-15.4-12.5-18.5-1.8-1-13-2.2-25-2.7-20.1-.9-22.3-1.3-28.7-5-10.1-5.9-12.8-12.3-12.9-29.5-.1-33-13.8-63.7-40.9-91.3-19.3-19.7-40.9-33-65.5-40.5-5.9-1.8-19.1-2.4-63.3-2.9-69.4-.8-84.8.6-108.4 10C45.9 59.5 14.7 96.1 3.3 142.9 1.2 151.7.7 165.8.2 246.8c-.6 101.5.1 116.4 6.4 136.5 15.6 49.6 59.9 86.3 104.4 94.3 14.8 2.7 197.3 3.3 216 .8 32.5-4.4 58-17.5 81.9-41.9 17.3-17.7 28.1-36.8 35.2-62.1 4.9-17.6 4.5-142.8 2.5-151.7zm-322.1-63.6c7.8-7.9 10-8.2 58.8-8.2 43.9 0 45.4.1 51.8 3.4 9.3 4.7 13.4 11.3 13.4 21.9 0 9.5-3.8 16.2-12.3 21.6-4.6 2.9-7.3 3.1-50.3 3.3-26.5.2-47.7-.4-50.8-1.2-16.6-4.7-22.8-28.5-10.6-40.8zm191.8 199.8l-14.9 2.4-77.5.9c-68.1.8-87.3-.4-90.9-2-7.1-3.1-13.8-11.7-14.9-19.4-1.1-7.3 2.6-17.3 8.2-22.4 7.1-6.4 10.2-6.6 97.3-6.7 89.6-.1 89.1-.1 97.6 7.8 12.1 11.3 9.5 31.2-4.9 39.4z",
 				],
 			},
-			U = {
+			J = {
 				prefix: "fab",
 				iconName: "opencart",
 				icon: [
@@ -5364,30 +5364,30 @@ LWR.define(
 			},
 			Z0 = {
 				faMonero: m,
-				faHooli: w,
+				faHooli: x,
 				faYelp: D,
 				faCcVisa: T,
-				faLastfm: A,
+				faLastfm: P,
 				faShopware: u,
 				faCreativeCommonsNc: _,
 				faAws: Z,
 				faRedhat: N,
 				faYoast: b,
-				faCloudflare: x,
-				faUps: P,
-				faPixiv: V,
+				faCloudflare: q,
+				faUps: k,
+				faPixiv: H,
 				faWpexplorer: g,
 				faDyalog: e1,
 				faBity: H1,
 				faStackpath: G,
-				faBuysellads: k,
-				faFirstOrder: X,
+				faBuysellads: w,
+				faFirstOrder: $,
 				faModx: z1,
 				faGuilded: L,
-				faVnv: J,
+				faVnv: B,
 				faSquareJs: l1,
 				faJsSquare: S,
-				faMicrosoft: q,
+				faMicrosoft: A,
 				faQq: M,
 				faOrcid: y2,
 				faJava: x1,
@@ -5411,7 +5411,7 @@ LWR.define(
 				faContao: b3,
 				faSquareFontAwesome: d3,
 				faDeskpro: A2,
-				faBrave: H,
+				faBrave: V,
 				faSistrix: y,
 				faSquareInstagram: I1,
 				faInstagramSquare: L1,
@@ -5439,7 +5439,7 @@ LWR.define(
 				faRedRiver: S1,
 				faCreativeCommonsSa: N3,
 				faSafari: n1,
-				faGoogle: Y,
+				faGoogle: U,
 				faSquareFontAwesomeStroke: T2,
 				faFontAwesomeAlt: k3,
 				faAtlassian: w1,
@@ -5457,7 +5457,7 @@ LWR.define(
 				faWeixin: n2,
 				faShirtsinbulk: P3,
 				faCodepen: a1,
-				faGitAlt: B,
+				faGitAlt: W,
 				faLyft: F2,
 				faRev: q3,
 				faWindows: F1,
@@ -5610,11 +5610,11 @@ LWR.define(
 				faXing: p,
 				faBlackberry: O,
 				faCreativeCommonsPd: j,
-				faPlaystation: W,
-				faQuinscape: $,
+				faPlaystation: Y,
+				faQuinscape: X,
 				faLess: E,
 				faBloggerB: I,
-				faOpencart: U,
+				faOpencart: J,
 				faVine: R,
 				faSignalMessenger: v1,
 				faPaypal: h1,
@@ -5929,13 +5929,13 @@ LWR.define(
 			(a.faBluetoothB = s2),
 			(a.faBootstrap = o5),
 			(a.faBots = z7),
-			(a.faBrave = H),
+			(a.faBrave = V),
 			(a.faBraveReverse = g5),
 			(a.faBtc = F7),
 			(a.faBuffer = O7),
 			(a.faBuromobelexperte = w8),
 			(a.faBuyNLarge = d0),
-			(a.faBuysellads = k),
+			(a.faBuysellads = w),
 			(a.faCanadianMapleLeaf = H0),
 			(a.faCcAmazonPay = _6),
 			(a.faCcAmex = L7),
@@ -5951,7 +5951,7 @@ LWR.define(
 			(a.faCentos = i2),
 			(a.faChrome = e3),
 			(a.faChromecast = S3),
-			(a.faCloudflare = x),
+			(a.faCloudflare = q),
 			(a.faCloudscale = x5),
 			(a.faCloudsmith = r2),
 			(a.faCloudversify = I5),
@@ -6030,7 +6030,7 @@ LWR.define(
 			(a.faFigma = O6),
 			(a.faFirefox = S4),
 			(a.faFirefoxBrowser = A7),
-			(a.faFirstOrder = X),
+			(a.faFirstOrder = $),
 			(a.faFirstOrderAlt = y5),
 			(a.faFirstdraft = g1),
 			(a.faFlickr = U5),
@@ -6055,7 +6055,7 @@ LWR.define(
 			(a.faGg = v),
 			(a.faGgCircle = p8),
 			(a.faGit = M7),
-			(a.faGitAlt = B),
+			(a.faGitAlt = W),
 			(a.faGitSquare = a7),
 			(a.faGithub = y7),
 			(a.faGithubAlt = Z2),
@@ -6070,7 +6070,7 @@ LWR.define(
 			(a.faGolang = J2),
 			(a.faGoodreads = A4),
 			(a.faGoodreadsG = Q8),
-			(a.faGoogle = Y),
+			(a.faGoogle = U),
 			(a.faGoogleDrive = r8),
 			(a.faGooglePay = S0),
 			(a.faGooglePlay = e8),
@@ -6092,7 +6092,7 @@ LWR.define(
 			(a.faHips = h2),
 			(a.faHireAHelper = E1),
 			(a.faHive = o4),
-			(a.faHooli = w),
+			(a.faHooli = x),
 			(a.faHornbill = b7),
 			(a.faHotjar = J3),
 			(a.faHouzz = o),
@@ -6127,7 +6127,7 @@ LWR.define(
 			(a.faKickstarterK = H8),
 			(a.faKorvue = x0),
 			(a.faLaravel = X3),
-			(a.faLastfm = A),
+			(a.faLastfm = P),
 			(a.faLastfmSquare = q6),
 			(a.faLeanpub = o7),
 			(a.faLess = E),
@@ -6154,7 +6154,7 @@ LWR.define(
 			(a.faMendeley = E6),
 			(a.faMeta = Y1),
 			(a.faMicroblog = C8),
-			(a.faMicrosoft = q),
+			(a.faMicrosoft = A),
 			(a.faMintbit = v5),
 			(a.faMix = M1),
 			(a.faMixcloud = f0),
@@ -6177,7 +6177,7 @@ LWR.define(
 			(a.faOdnoklassnikiSquare = x4),
 			(a.faOdysee = Y7),
 			(a.faOldRepublic = W7),
-			(a.faOpencart = U),
+			(a.faOpencart = J),
 			(a.faOpenid = j2),
 			(a.faOpensuse = O3),
 			(a.faOpera = e),
@@ -6205,13 +6205,13 @@ LWR.define(
 			(a.faPinterestP = Z8),
 			(a.faPinterestSquare = d),
 			(a.faPix = P0),
-			(a.faPixiv = V),
-			(a.faPlaystation = W),
+			(a.faPixiv = H),
+			(a.faPlaystation = Y),
 			(a.faProductHunt = h3),
 			(a.faPushed = V0),
 			(a.faPython = v7),
 			(a.faQq = M),
-			(a.faQuinscape = $),
+			(a.faQuinscape = X),
 			(a.faQuora = e0),
 			(a.faRProject = D3),
 			(a.faRaspberryPi = s8),
@@ -6345,7 +6345,7 @@ LWR.define(
 			(a.faUnity = Q),
 			(a.faUnsplash = r4),
 			(a.faUntappd = o1),
-			(a.faUps = P),
+			(a.faUps = k),
 			(a.faUpwork = G6),
 			(a.faUsb = Q7),
 			(a.faUsps = _5),
@@ -6360,7 +6360,7 @@ LWR.define(
 			(a.faVimeoV = w2),
 			(a.faVine = R),
 			(a.faVk = S2),
-			(a.faVnv = J),
+			(a.faVnv = B),
 			(a.faVuejs = R3),
 			(a.faWatchmanMonitoring = I2),
 			(a.faWaze = O8),
@@ -6441,9 +6441,9 @@ LWR.define(
 				}
 				return c;
 			}
-			function w(c) {
+			function x(c) {
 				return (
-					(w =
+					(x =
 						typeof Symbol == "function" && typeof Symbol.iterator == "symbol"
 							? function (e) {
 									return typeof e;
@@ -6456,7 +6456,7 @@ LWR.define(
 										? "symbol"
 										: typeof e;
 								}),
-					w(c)
+					x(c)
 				);
 			}
 			function D(c, e) {
@@ -6472,7 +6472,7 @@ LWR.define(
 						Object.defineProperty(c, i.key, i);
 				}
 			}
-			function A(c, e, n) {
+			function P(c, e, n) {
 				return (
 					e && T(c.prototype, e),
 					n && T(c, n),
@@ -6494,10 +6494,10 @@ LWR.define(
 				);
 			}
 			function _(c, e) {
-				return b(c) || P(c, e) || V(c, e) || H1();
+				return b(c) || k(c, e) || H(c, e) || H1();
 			}
 			function Z(c) {
-				return N(c) || x(c) || V(c) || e1();
+				return N(c) || q(c) || H(c) || e1();
 			}
 			function N(c) {
 				if (Array.isArray(c)) return g(c);
@@ -6505,14 +6505,14 @@ LWR.define(
 			function b(c) {
 				if (Array.isArray(c)) return c;
 			}
-			function x(c) {
+			function q(c) {
 				if (
 					(typeof Symbol != "undefined" && c[Symbol.iterator] != null) ||
 					c["@@iterator"] != null
 				)
 					return Array.from(c);
 			}
-			function P(c, e) {
+			function k(c, e) {
 				var n =
 					c == null
 						? null
@@ -6543,7 +6543,7 @@ LWR.define(
 					return i;
 				}
 			}
-			function V(c, e) {
+			function H(c, e) {
 				if (!!c) {
 					if (typeof c == "string") return g(c, e);
 					var n = Object.prototype.toString.call(c).slice(8, -1);
@@ -6573,24 +6573,24 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
 			}
 			var G = function () {},
-				k = {},
-				X = {},
+				w = {},
+				$ = {},
 				z1 = null,
 				L = { mark: G, measure: G };
 			try {
-				typeof window != "undefined" && (k = window),
-					typeof document != "undefined" && (X = document),
+				typeof window != "undefined" && (w = window),
+					typeof document != "undefined" && ($ = document),
 					typeof MutationObserver != "undefined" && (z1 = MutationObserver),
 					typeof performance != "undefined" && (L = performance);
 			} catch (c) {}
-			var J = k.navigator || {},
-				l1 = J.userAgent,
+			var B = w.navigator || {},
+				l1 = B.userAgent,
 				S = l1 === void 0 ? "" : l1,
-				q = k,
-				M = X,
+				A = w,
+				M = $,
 				y2 = z1,
 				x1 = L;
-			q.document;
+			A.document;
 			var K =
 					!!M.documentElement &&
 					!!M.head &&
@@ -6621,19 +6621,19 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						return !1;
 					}
 				})(),
-				H = "classic",
+				V = "classic",
 				y = "sharp",
-				I1 = [H, y];
+				I1 = [V, y];
 			function L1(c) {
 				return new Proxy(c, {
 					get: function (n, i) {
-						return i in n ? n[i] : n[H];
+						return i in n ? n[i] : n[V];
 					},
 				});
 			}
 			var V1 = L1(
 					((P1 = {}),
-					u(P1, H, {
+					u(P1, V, {
 						fa: "solid",
 						fas: "solid",
 						"fa-solid": "solid",
@@ -6667,7 +6667,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				),
 				y1 = L1(
 					((q1 = {}),
-					u(q1, H, {
+					u(q1, V, {
 						solid: "fas",
 						regular: "far",
 						light: "fal",
@@ -6686,7 +6686,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				),
 				u1 = L1(
 					((Z1 = {}),
-					u(Z1, H, {
+					u(Z1, V, {
 						fab: "fa-brands",
 						fad: "fa-duotone",
 						fak: "fa-kit",
@@ -6705,7 +6705,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				),
 				C3 = L1(
 					((E1 = {}),
-					u(E1, H, {
+					u(E1, V, {
 						"fa-brands": "fab",
 						"fa-duotone": "fad",
 						"fa-kit": "fak",
@@ -6728,7 +6728,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					/Font ?Awesome ?([56 ]*)(Solid|Regular|Light|Thin|Duotone|Brands|Free|Pro|Sharp|Kit)?.*/i,
 				P2 = L1(
 					((T1 = {}),
-					u(T1, H, {
+					u(T1, V, {
 						900: "fas",
 						400: "far",
 						normal: "far",
@@ -6754,7 +6754,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 					SECONDARY: "secondary",
 				},
 				N1 = new Set();
-			Object.keys(y1[H]).map(N1.add.bind(N1)),
+			Object.keys(y1[V]).map(N1.add.bind(N1)),
 				Object.keys(y1[y]).map(N1.add.bind(N1));
 			var L3 = []
 					.concat(I1, Z(N1), [
@@ -6809,7 +6809,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 							return "w-".concat(c);
 						}),
 					),
-				k1 = q.FontAwesomeConfig || {};
+				k1 = A.FontAwesomeConfig || {};
 			function V3(c) {
 				var e = M.querySelector("script[" + c + "]");
 				if (e) return e.getAttribute(c);
@@ -6888,7 +6888,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 						return b1.cssPrefix;
 					},
 				}),
-				(q.FontAwesomeConfig = h);
+				(A.FontAwesomeConfig = h);
 			var S1 = [];
 			function N3(c) {
 				return (
@@ -6899,7 +6899,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 				);
 			}
 			var n1 = K1,
-				Y = { size: 16, x: 0, y: 0, rotate: 0, flipX: !1, flipY: !1 };
+				U = { size: 16, x: 0, y: 0, rotate: 0, flipX: !1, flipY: !1 };
 			function T2(c) {
 				if (!(!c || !K)) {
 					var e = M.createElement("style");
@@ -6955,10 +6955,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 			}
 			function e2(c) {
 				return (
-					c.size !== Y.size ||
-					c.x !== Y.x ||
-					c.y !== Y.y ||
-					c.rotate !== Y.rotate ||
+					c.size !== U.size ||
+					c.x !== U.x ||
+					c.y !== U.y ||
+					c.rotate !== U.rotate ||
 					c.flipX ||
 					c.flipY
 				);
@@ -7799,12 +7799,12 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 						};
 					},
 				},
-				a1 = q || {};
+				a1 = A || {};
 			a1[Q] || (a1[Q] = {}),
 				a1[Q].styles || (a1[Q].styles = {}),
 				a1[Q].hooks || (a1[Q].hooks = {}),
 				a1[Q].shims || (a1[Q].shims = []);
-			var B = a1[Q],
+			var W = a1[Q],
 				F2 = [],
 				q3 = function c() {
 					M.removeEventListener("DOMContentLoaded", c),
@@ -7900,19 +7900,19 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 					i = n.skipHooks,
 					r = i === void 0 ? !1 : i,
 					f = R2(e);
-				typeof B.hooks.addPack == "function" && !r
-					? B.hooks.addPack(c, R2(e))
-					: (B.styles[c] = m(m({}, B.styles[c] || {}), f)),
+				typeof W.hooks.addPack == "function" && !r
+					? W.hooks.addPack(c, R2(e))
+					: (W.styles[c] = m(m({}, W.styles[c] || {}), f)),
 					c === "fas" && D1("fa", e);
 			}
 			var R1,
 				G1,
 				j1,
-				M1 = B.styles,
-				I3 = B.shims,
+				M1 = W.styles,
+				I3 = W.shims,
 				_3 =
 					((R1 = {}),
-					u(R1, H, Object.values(u1[H])),
+					u(R1, V, Object.values(u1[V])),
 					u(R1, y, Object.values(u1[y])),
 					R1),
 				t2 = null,
@@ -7923,7 +7923,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 				Y2 = {},
 				$2 =
 					((G1 = {}),
-					u(G1, H, Object.keys(V1[H])),
+					u(G1, V, Object.keys(V1[V])),
 					u(G1, y, Object.keys(V1[y])),
 					G1);
 			function F3(c) {
@@ -8036,15 +8036,15 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 				var e =
 						arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {},
 					n = e.family,
-					i = n === void 0 ? H : n,
+					i = n === void 0 ? V : n,
 					r = V1[i][c],
 					f = y1[i][c] || y1[i][r],
-					t = c in B.styles ? c : null;
+					t = c in W.styles ? c : null;
 				return f || t || null;
 			}
 			var J2 =
 				((j1 = {}),
-				u(j1, H, Object.keys(u1[H])),
+				u(j1, V, Object.keys(u1[V])),
 				u(j1, y, Object.keys(u1[y])),
 				j1);
 			function W1(c) {
@@ -8055,16 +8055,16 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 					r = i === void 0 ? !1 : i,
 					f =
 						((e = {}),
-						u(e, H, "".concat(h.cssPrefix, "-").concat(H)),
+						u(e, V, "".concat(h.cssPrefix, "-").concat(V)),
 						u(e, y, "".concat(h.cssPrefix, "-").concat(y)),
 						e),
 					t = null,
-					l = H;
-				(c.includes(f[H]) ||
+					l = V;
+				(c.includes(f[V]) ||
 					c.some(function (v) {
-						return J2[H].includes(v);
+						return J2[V].includes(v);
 					})) &&
-					(l = H),
+					(l = V),
 					(c.includes(f[y]) ||
 						c.some(function (v) {
 							return J2[y].includes(v);
@@ -8082,7 +8082,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 								: z
 									? (v.iconName = z)
 									: s !== h.replacementClass &&
-										s !== f[H] &&
+										s !== f[V] &&
 										s !== f[y] &&
 										v.rest.push(s),
 						!r && v.prefix && v.iconName)
@@ -8117,7 +8117,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 						D(this, c), (this.definitions = {});
 					}
 					return (
-						A(c, [
+						P(c, [
 							{
 								key: "add",
 								value: function () {
@@ -8131,7 +8131,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 									Object.keys(t).forEach(function (l) {
 										(n.definitions[l] = m(m({}, n.definitions[l] || {}), t[l])),
 											D1(l, t[l]);
-										var o = u1[H][l];
+										var o = u1[V][l];
 										o && D1(o, t[l]), U2();
 									});
 								},
@@ -8185,7 +8185,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 						if (
 							(Object.keys(r).forEach(function (t) {
 								typeof r[t] == "function" && (n[t] = r[t]),
-									w(r[t]) === "object" &&
+									x(r[t]) === "object" &&
 										Object.keys(r[t]).forEach(function (l) {
 											n[t] || (n[t] = {}), (n[t][l] = r[t][l]);
 										});
@@ -8240,7 +8240,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 					n = c.prefix || i1();
 				if (!!e)
 					return (
-						(e = s1(n, e) || e), D2(a3.definitions, n, e) || D2(B.styles, n, e)
+						(e = s1(n, e) || e), D2(a3.definitions, n, e) || D2(W.styles, n, e)
 					);
 			}
 			var a3 = new j3(),
@@ -8275,7 +8275,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 				$3 = {
 					icon: function (e) {
 						if (e === null) return null;
-						if (w(e) === "object" && e.prefix && e.iconName)
+						if (x(e) === "object" && e.prefix && e.iconName)
 							return {
 								prefix: e.prefix,
 								iconName: s1(e.prefix, e.iconName) || e.iconName,
@@ -8317,7 +8317,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 								: {},
 						n = e.autoReplaceSvgRoot,
 						i = n === void 0 ? M : n;
-					(Object.keys(B.styles).length > 0 || h.autoFetchSvg) &&
+					(Object.keys(W.styles).length > 0 || h.autoFetchSvg) &&
 						K &&
 						h.autoReplaceSvg &&
 						F.dom.i2svg({ node: i });
@@ -8406,8 +8406,8 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 					p = d === void 0 ? !1 : d,
 					O = i.found ? i : n,
 					j = O.width,
-					W = O.height,
-					$ = r === "fak",
+					Y = O.height,
+					X = r === "fak",
 					E = [
 						h.replacementClass,
 						f ? "".concat(h.cssPrefix, "-").concat(f) : "",
@@ -8431,13 +8431,13 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 								class: E,
 								role: z.attributes.role || "img",
 								xmlns: "http://www.w3.org/2000/svg",
-								viewBox: "0 0 ".concat(j, " ").concat(W),
+								viewBox: "0 0 ".concat(j, " ").concat(Y),
 							},
 						),
 					},
-					U =
-						$ && !~z.classes.indexOf("fa-fw")
-							? { width: "".concat((j / W) * 16 * 0.0625, "em") }
+					J =
+						X && !~z.classes.indexOf("fa-fw")
+							? { width: "".concat((j / Y) * 16 * 0.0625, "em") }
 							: {};
 				p && (I.attributes[o1] = ""),
 					o &&
@@ -8461,7 +8461,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 							maskId: v,
 							transform: t,
 							symbol: l,
-							styles: m(m({}, U), z.styles),
+							styles: m(m({}, J), z.styles),
 						},
 					),
 					v1 =
@@ -8539,7 +8539,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 					t
 				);
 			}
-			var v2 = B.styles;
+			var v2 = W.styles;
 			function h2(c) {
 				var e = c[0],
 					n = c[1],
@@ -8742,7 +8742,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 				if (c.length === 0) n();
 				else {
 					var i = C2;
-					h.mutateApproach === b3 && (i = q.requestAnimationFrame || C2),
+					h.mutateApproach === b3 && (i = A.requestAnimationFrame || C2),
 						i(function () {
 							var r = i4(),
 								f = b2.begin("mutate");
@@ -8867,7 +8867,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 					title: null,
 					titleId: null,
 					prefix: null,
-					transform: Y,
+					transform: U,
 					symbol: !1,
 					mask: { iconName: null, prefix: null, rest: [] },
 					maskId: null,
@@ -8892,7 +8892,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 						title: c.getAttribute("title"),
 						titleId: c.getAttribute("data-fa-title-id"),
 						prefix: r,
-						transform: Y,
+						transform: U,
 						mask: { iconName: null, prefix: null, rest: [] },
 						maskId: null,
 						symbol: !1,
@@ -8901,7 +8901,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 					l,
 				);
 			}
-			var h4 = B.styles;
+			var h4 = W.styles;
 			function g2(c) {
 				var e =
 					h.autoReplaceSvg === "nest" ? f3(c, { styleParser: !1 }) : f3(c);
@@ -8913,7 +8913,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 			I1.map(function (c) {
 				t1.add("fa-".concat(c));
 			}),
-				Object.keys(V1[H]).map(t1.add.bind(t1)),
+				Object.keys(V1[V]).map(t1.add.bind(t1)),
 				Object.keys(V1[y]).map(t1.add.bind(t1)),
 				(t1 = Z(t1));
 			function l3(c) {
@@ -9001,7 +9001,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 								? arguments[1]
 								: {},
 						i = n.transform,
-						r = i === void 0 ? Y : i,
+						r = i === void 0 ? U : i,
 						f = n.symbol,
 						t = f === void 0 ? !1 : f,
 						l = n.mask,
@@ -9013,11 +9013,11 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 						p = n.titleId,
 						O = p === void 0 ? null : p,
 						j = n.classes,
-						W = j === void 0 ? [] : j,
-						$ = n.attributes,
-						E = $ === void 0 ? {} : $,
+						Y = j === void 0 ? [] : j,
+						X = n.attributes,
+						E = X === void 0 ? {} : X,
 						I = n.styles,
-						U = I === void 0 ? {} : I;
+						J = I === void 0 ? {} : I;
 					if (!!e) {
 						var R = e.prefix,
 							v1 = e.iconName,
@@ -9043,12 +9043,12 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 									},
 									prefix: R,
 									iconName: v1,
-									transform: m(m({}, Y), r),
+									transform: m(m({}, U), r),
 									symbol: t,
 									title: d,
 									maskId: s,
 									titleId: O,
-									extra: { attributes: E, styles: U, classes: W },
+									extra: { attributes: E, styles: J, classes: Y },
 								})
 							);
 						});
@@ -9096,13 +9096,13 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 												}),
 									])
 										.then(function (j) {
-											var W = _(j, 2),
-												$ = W[0],
-												E = W[1];
+											var Y = _(j, 2),
+												X = Y[0],
+												E = Y[1];
 											p([
 												n,
 												s2({
-													icons: { main: $, mask: E },
+													icons: { main: X, mask: E },
 													prefix: l,
 													iconName: r,
 													transform: o,
@@ -9224,7 +9224,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 											? arguments[1]
 											: {},
 									r = i.transform,
-									f = r === void 0 ? Y : r,
+									f = r === void 0 ? U : r,
 									t = i.title,
 									l = t === void 0 ? null : t,
 									o = i.classes,
@@ -9238,7 +9238,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 										r1("beforeDOMElementCreation", { content: n, params: i }),
 										c3({
 											content: n,
-											transform: m(m({}, Y), f),
+											transform: m(m({}, U), f),
 											title: l,
 											extra: {
 												attributes: z,
@@ -9300,14 +9300,14 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 						t = f.filter(function (h1) {
 							return h1.getAttribute(Q1) === e;
 						})[0],
-						l = q.getComputedStyle(c, e),
+						l = A.getComputedStyle(c, e),
 						o = l.getPropertyValue("font-family").match(p3),
 						v = l.getPropertyValue("font-weight"),
 						s = l.getPropertyValue("content");
 					if (t && !o) return c.removeChild(t), i();
 					if (o && s !== "none" && s !== "") {
 						var z = l.getPropertyValue("content"),
-							d = ~["Sharp"].indexOf(o[2]) ? y : H,
+							d = ~["Sharp"].indexOf(o[2]) ? y : V,
 							p = ~[
 								"Solid",
 								"Regular",
@@ -9321,17 +9321,17 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 								: P2[d][v],
 							O = H4(z),
 							j = O.value,
-							W = O.isSecondary,
-							$ = o[0].startsWith("FontAwesome"),
+							Y = O.isSecondary,
+							X = o[0].startsWith("FontAwesome"),
 							E = f2(p, j),
 							I = E;
-						if ($) {
-							var U = G3(j);
-							U.iconName && U.prefix && ((E = U.iconName), (p = U.prefix));
+						if (X) {
+							var J = G3(j);
+							J.iconName && J.prefix && ((E = J.iconName), (p = J.prefix));
 						}
 						if (
 							E &&
-							!W &&
+							!Y &&
 							(!t || t.getAttribute(O1) !== p || t.getAttribute(a2) !== I)
 						) {
 							c.setAttribute(n, I), t && c.removeChild(t);
@@ -9590,7 +9590,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 									attributes: m(m({}, L2), {}, { fill: "white" }),
 								},
 								j = s.children ? { children: s.children.map(h3) } : {},
-								W = {
+								Y = {
 									tag: "g",
 									attributes: m({}, p.inner),
 									children: [
@@ -9605,10 +9605,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 										),
 									],
 								},
-								$ = { tag: "g", attributes: m({}, p.outer), children: [W] },
+								X = { tag: "g", attributes: m({}, p.outer), children: [Y] },
 								E = "mask-".concat(l || w1()),
 								I = "clip-".concat(l || w1()),
-								U = {
+								J = {
 									tag: "mask",
 									attributes: m(
 										m({}, L2),
@@ -9619,13 +9619,13 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 											maskContentUnits: "userSpaceOnUse",
 										},
 									),
-									children: [O, $],
+									children: [O, X],
 								},
 								R = {
 									tag: "defs",
 									children: [
 										{ tag: "clipPath", attributes: { id: I }, children: S4(d) },
-										U,
+										J,
 									],
 								};
 							return (
@@ -9648,8 +9648,8 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 				A4 = {
 					provides: function (e) {
 						var n = !1;
-						q.matchMedia &&
-							(n = q.matchMedia("(prefers-reduced-motion: reduce)").matches),
+						A.matchMedia &&
+							(n = A.matchMedia("(prefers-reduced-motion: reduce)").matches),
 							(e.missingIconAbstract = function () {
 								var i = [],
 									r = { fill: "currentColor" },
@@ -9792,22 +9792,22 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 			"@fortawesome/fontawesome-svg-core/v/6_5_1",
 			"@fortawesome/free-brands-svg-icons/v/6_5_1",
 		],
-		function (a, C, m, w) {
+		function (a, C, m, x) {
 			"use strict";
-			function D(b, x, P) {
-				var V = b ? "[" + b + "]" : "",
+			function D(b, q, k) {
+				var H = b ? "[" + b + "]" : "",
 					g = b ? "[" + b + "-host]" : "";
 				return (
-					(x ? ":host {" : g + " {") +
+					(q ? ":host {" : g + " {") +
 					"--icon-size: 5rem;}svg" +
-					V +
+					H +
 					" {height: var(--icon-size, 5rem);}"
 				);
 			}
 			var T = [D];
-			const A = [];
-			function u(b, x, P, V) {
-				return A;
+			const P = [];
+			function u(b, q, k, H) {
+				return P;
 			}
 			var _ = C.registerTemplate(u);
 			(u.stylesheets = []),
@@ -9816,12 +9816,12 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 				(u.legacyStylesheetToken = "ui-icon_icon"),
 				C.freezeTemplate(u);
 			class Z extends C.LightningElement {
-				constructor(...x) {
-					super(...x);
+				constructor(...q) {
+					super(...q);
 					(this.iconDefinitions = {
-						linkedin: w.faLinkedin,
-						github: w.faGithub,
-						salesforce: w.faSalesforce,
+						linkedin: x.faLinkedin,
+						github: x.faGithub,
+						salesforce: x.faSalesforce,
 					}),
 						(this._iconName = void 0),
 						(this.iconDef = void 0);
@@ -9829,8 +9829,8 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 				get iconName() {
 					return this._iconName;
 				}
-				set iconName(x) {
-					(this._iconName = x), (this.iconDef = this.iconDefinitions[x]);
+				set iconName(q) {
+					(this._iconName = q), (this.iconDef = this.iconDefinitions[q]);
 				}
 				connectedCallback() {
 					this.template.appendChild(m.icon(this.iconDef).node[0]);
@@ -9853,31 +9853,37 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 		["exports", "lwc/v/5_0_0", "ui/icon/v/0_0_1"],
 		function (a, C, m) {
 			"use strict";
-			function w(k) {
-				return k && typeof k == "object" && "default" in k ? k : { default: k };
+			function x(w) {
+				return w && typeof w == "object" && "default" in w ? w : { default: w };
 			}
-			var D = w(m);
-			function T(k, X, z1) {
-				var L = k ? "[" + k + "]" : "",
-					J = k ? "[" + k + "-host]" : "";
+			var D = x(m);
+			function T(w, $, z1) {
+				var L = w ? "[" + w + "]" : "",
+					B = w ? "[" + w + "-host]" : "";
 				return (
-					(X ? ":host {" : J + " {") +
+					($ ? ":host {" : B + " {") +
 					"text-align: center;width: 100%;display: flex;flex-direction: column;flex-wrap: wrap;align-items: center;justify-content: center;gap: 1rem;border-top: 2px solid rgba(0, 0, 0, 0.228);padding: 0.5rem 0 0.5rem 0;}a" +
 					L +
 					" {color: rgba(0, 0, 0, 0.563);margin: 0.75rem;}ui-icon" +
 					L +
 					" {--icon-size: 3rem;}@media only screen and (min-width: 769px) {" +
-					(X ? ":host {" : J + " {") +
+					($ ? ":host {" : B + " {") +
 					"flex-direction: row;}ui-icon" +
 					L +
 					" {--icon-size: 2.5rem;}a" +
 					L +
 					" {color: rgba(0, 0, 0, 0.501);margin: 0.5rem;transition: all 200ms ease-in;}a:hover" +
 					L +
-					" {color: rgb(0, 0, 0);}}"
+					" {color: rgb(0, 0, 0);}}@media (prefers-color-scheme: dark) {" +
+					($ ? ":host {" : B + " {") +
+					"color: #eee;border-color: #eeeeee97;}a" +
+					L +
+					" {color: #ffffff82;}a:hover" +
+					L +
+					" {color: #eee;}}"
 				);
 			}
-			var A = [T];
+			var P = [T];
 			const u = { key: 0 },
 				_ = { key: 1 },
 				Z = {
@@ -9892,31 +9898,31 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 					attrs: { href: "https://github.com/l-peacock", target: "_blank" },
 					key: 4,
 				},
-				x = { props: { iconName: "github" }, key: 5 },
-				P = {
+				q = { props: { iconName: "github" }, key: 5 },
+				k = {
 					attrs: {
 						href: "https://www.salesforce.com/trailblazer/lachlan-peacock",
 						target: "_blank",
 					},
 					key: 6,
 				},
-				V = { props: { iconName: "salesforce" }, key: 7 };
-			function g(k, X, z1, L) {
-				const { d: J, t: l1, h: S, c: q } = k;
+				H = { props: { iconName: "salesforce" }, key: 7 };
+			function g(w, $, z1, L) {
+				const { d: B, t: l1, h: S, c: A } = w;
 				return [
 					S("span", u, [
-						l1("\xA9\uFE0F " + J(X.currentYear) + " Lachlan Peacock "),
+						l1("\xA9\uFE0F " + B($.currentYear) + " Lachlan Peacock "),
 					]),
 					S("div", _, [
-						S("a", Z, [q("ui-icon", D.default, N)]),
-						S("a", b, [q("ui-icon", D.default, x)]),
-						S("a", P, [q("ui-icon", D.default, V)]),
+						S("a", Z, [A("ui-icon", D.default, N)]),
+						S("a", b, [A("ui-icon", D.default, q)]),
+						S("a", k, [A("ui-icon", D.default, H)]),
 					]),
 				];
 			}
 			var e1 = C.registerTemplate(g);
 			(g.stylesheets = []),
-				A && g.stylesheets.push.apply(g.stylesheets, A),
+				P && g.stylesheets.push.apply(g.stylesheets, P),
 				(g.stylesheetToken = "lwc-6a2ffv9rvft"),
 				(g.legacyStylesheetToken = "ui-footer_footer"),
 				C.freezeTemplate(g);
@@ -9938,38 +9944,42 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 		["exports", "lwc/v/5_0_0"],
 		function (a, C) {
 			"use strict";
-			function m(b, x, P) {
-				var V = b ? "[" + b + "]" : "",
+			function m(b, q, k) {
+				var H = b ? "[" + b + "]" : "",
 					g = b ? "[" + b + "-host]" : "",
 					e1 = b ? "-" + b : "";
 				return (
-					(x ? ":host {" : g + " {") +
+					(q ? ":host {" : g + " {") +
 					"max-width: 800px;}h1" +
-					V +
+					H +
 					" {font-weight: 400;border-left: solid rgba(190, 190, 190, 0.808) 4px;padding: 0.5rem 1rem 0.5rem 1rem;background-color: rgba(238, 235, 235, 0.387);transition: all 300ms ease-in-out;}h1:hover" +
-					V +
+					H +
 					" {background-color: rgba(201, 200, 200, 0.387);cursor: default;}p" +
-					V +
+					H +
 					" {border-left: solid rgba(190, 190, 190, 0.808) 2px;padding-left: 1rem;line-height: 2;}.emoji-wave" +
-					V +
+					H +
 					" {animation-name: wave" +
 					e1 +
 					";animation-duration: 2.5s;animation-iteration-count: infinite;transform-origin: 70% 70%;display: inline-block;transition: all 200ms ease-out;}@keyframes wave" +
 					e1 +
-					" {0% {transform: rotate(0deg);}10% {transform: rotate(14deg);}20% {transform: rotate(-8deg);}30% {transform: rotate(14deg);}40% {transform: rotate(-4deg);}50% {transform: rotate(10deg);}60% {transform: rotate(0deg);}100% {transform: rotate(0deg);}}"
+					" {0% {transform: rotate(0deg);}10% {transform: rotate(14deg);}20% {transform: rotate(-8deg);}30% {transform: rotate(14deg);}40% {transform: rotate(-4deg);}50% {transform: rotate(10deg);}60% {transform: rotate(0deg);}100% {transform: rotate(0deg);}}@media (prefers-color-scheme: dark) {h1" +
+					H +
+					" {background-color: #292737;}h1:hover" +
+					H +
+					" {background-color: #333045;}}"
 				);
 			}
-			var w = [m];
+			var x = [m];
 			const D = C.parseFragment`<h1${3}><span class="emoji-wave${0}"${2}>👋</span> I&#x27;m Lachie</h1>`,
 				T = C.parseFragment`<p${3}>I&#x27;m a software developer based in Melbourne, Australia. Passionate about building beautiful, high-quality software. I have extensive experience working with Salesforce, as well as full-stack JavaScript development.</p>`,
-				A = C.parseFragment`<p${3}>Besides being a dev, I love music and photography.</p>`;
-			function u(b, x, P, V) {
+				P = C.parseFragment`<p${3}>Besides being a dev, I love music and photography.</p>`;
+			function u(b, q, k, H) {
 				const { st: g } = b;
-				return [g(D(), 1), g(T(), 3), g(A(), 5)];
+				return [g(D(), 1), g(T(), 3), g(P(), 5)];
 			}
 			var _ = C.registerTemplate(u);
 			(u.stylesheets = []),
-				w && u.stylesheets.push.apply(u.stylesheets, w),
+				x && u.stylesheets.push.apply(u.stylesheets, x),
 				(u.stylesheetToken = "lwc-7aoo6clbjqd"),
 				(u.legacyStylesheetToken = "ui-contentBlock_contentBlock"),
 				C.freezeTemplate(u);
@@ -9984,60 +9994,66 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 	),
 	LWR.define("ui/banner/v/0_0_1", ["exports", "lwc/v/5_0_0"], function (a, C) {
 		"use strict";
-		function m(N, b, x) {
-			var P = N ? "[" + N + "]" : "",
-				V = N ? "[" + N + "-host]" : "",
+		function m(N, b, q) {
+			var k = N ? "[" + N + "]" : "",
+				H = N ? "[" + N + "-host]" : "",
 				g = N ? "-" + N : "";
 			return (
-				(b ? ":host {" : V + " {") +
+				(b ? ":host {" : H + " {") +
 				'background-color: rgb(250, 250, 250);display: flex;flex-wrap: wrap;justify-content: space-between;align-items: center;padding: 1rem 0.5rem 1rem 0.5rem;transition: all 200ms ease-in-out;height: 20rem;background-image: url("public/assets/banner-background.webp");background-size: cover;background-position-x: left;background-position-y: center;background-clip: border-box;}h1' +
-				P +
+				k +
 				" {font-weight: 400;font-size: 1.75rem;transition: all 200ms ease-in-out;}.typewriter" +
-				P +
+				k +
 				" h1" +
-				P +
+				k +
 				` {overflow: hidden;border-right: 0.1em solid orange;white-space: nowrap;text-align: left;font-family: monospace;letter-spacing: 0.2em;animation:
 		typing` +
 				g +
 				" 4s steps(14, end), blink-caret" +
 				g +
 				" 0.75s step-end infinite;color: antiquewhite;}.typewriter" +
-				P +
+				k +
 				" {background-color: rgba(0, 0, 0, 0.822);padding: 1rem;width: fit-content;}h2" +
-				P +
-				" {font-weight: 400;font-size: 1.5rem;font-family: monospace;background-color: rgba(255, 255, 255, 0.808);width: fit-content;padding: 0 0.5rem 0 0.5rem;}img" +
-				P +
+				k +
+				" {font-weight: 400;font-size: 1.5rem;font-family: monospace;background-color: rgba(255, 255, 255, 0.808);width: min-content;padding: 0 0.5rem 0 0.5rem;}img" +
+				k +
 				" {max-height: 10rem;border-radius: 2rem;align-self: flex-end;}@media only screen and (min-width: 769px) {" +
-				(b ? ":host {" : V + " {") +
+				(b ? ":host {" : H + " {") +
 				"padding: 2rem 4rem 2rem 4rem;background-position-y: top;height: 30rem;}h1" +
-				P +
-				" {font-weight: 400;font-size: 3rem;}}@media only screen and (min-width: 1600px) {" +
-				(b ? ":host {" : V + " {") +
+				k +
+				" {font-weight: 400;font-size: 3rem;}h2" +
+				k +
+				" {width: fit-content;}}@media only screen and (min-width: 1600px) {" +
+				(b ? ":host {" : H + " {") +
 				"background-position-y: center;}}@keyframes typing" +
 				g +
 				" {from {width: 0;}to {width: 100%;}}@keyframes blink-caret" +
 				g +
-				" {from,	to {border-color: transparent;}50% {border-color: rgb(249, 96, 30);}}"
+				" {from,	to {border-color: transparent;}50% {border-color: rgba(249, 96, 30, 0.747);}}@media (prefers-color-scheme: dark) {" +
+				(b ? ":host {" : H + " {") +
+				"background-color: #14131b7c;background-blend-mode: overlay;}h2" +
+				k +
+				" {background-color: rgba(40, 40, 40, 0.239);color: #eee;}}"
 			);
 		}
-		var w = [m];
+		var x = [m];
 		const D = C.parseFragment`<div class="typewriter${0}"${2}><h1${3}>hello, world!</h1></div>`,
 			T = C.parseFragment`<div${3}><h2${3}>Welcome to lachlanpeacock.com</h2></div>`;
-		function A(N, b, x, P) {
-			const { st: V, h: g } = N;
+		function P(N, b, q, k) {
+			const { st: H, h: g } = N;
 			return [
 				g("div", { className: b.computedClasses, key: 0 }, [
-					V(D(), 2),
-					V(T(), 4),
+					H(D(), 2),
+					H(T(), 4),
 				]),
 			];
 		}
-		var u = C.registerTemplate(A);
-		(A.stylesheets = []),
-			w && A.stylesheets.push.apply(A.stylesheets, w),
-			(A.stylesheetToken = "lwc-3ijtgsmmfei"),
-			(A.legacyStylesheetToken = "ui-banner_banner"),
-			C.freezeTemplate(A);
+		var u = C.registerTemplate(P);
+		(P.stylesheets = []),
+			x && P.stylesheets.push.apply(P.stylesheets, x),
+			(P.stylesheetToken = "lwc-3ijtgsmmfei"),
+			(P.legacyStylesheetToken = "ui-banner_banner"),
+			C.freezeTemplate(P);
 		class _ extends C.LightningElement {
 			constructor(...b) {
 				super(...b);
@@ -10093,19 +10109,19 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 			"ui/contentBlock/v/0_0_1",
 			"ui/footer/v/0_0_1",
 		],
-		function (a, C, m, w, D) {
+		function (a, C, m, x, D) {
 			"use strict";
 			function T(L) {
 				return L && typeof L == "object" && "default" in L ? L : { default: L };
 			}
-			var A = T(m),
-				u = T(w),
+			var P = T(m),
+				u = T(x),
 				_ = T(D);
-			function Z(L, J, l1) {
+			function Z(L, B, l1) {
 				var S = L ? "[" + L + "]" : "",
-					q = L ? "[" + L + "-host]" : "";
+					A = L ? "[" + L + "-host]" : "";
 				return (
-					(J ? ":host {" : q + " {") +
+					(B ? ":host {" : A + " {") +
 					"font-family: system-ui;display: flex;flex-direction: column;min-height: 100vh;}header" +
 					S +
 					" {width: auto;}header" +
@@ -10124,36 +10140,40 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 					S +
 					" {margin-top: auto;padding: 0.5rem 1rem 0.5rem 1rem;}@media only screen and (min-width: 769px) {main" +
 					S +
-					" {margin: 30px;flex-direction: row;}}"
+					" {margin: 30px;flex-direction: row;}}@media (prefers-color-scheme: dark) {" +
+					(B ? ":host {" : A + " {") +
+					"background-color: #14131b;}main" +
+					S +
+					" {color: #eee;}}"
 				);
 			}
 			var N = [Z];
 			const b = { key: 0 },
-				x = { props: { showBackgroundImage: !0 }, key: 1 },
-				P = { key: 2 },
-				V = { key: 3 },
+				q = { props: { showBackgroundImage: !0 }, key: 1 },
+				k = { key: 2 },
+				H = { key: 3 },
 				g = { key: 4 },
 				e1 = { key: 5 },
 				H1 = { key: 6 };
-			function G(L, J, l1, S) {
-				const { c: q, h: M } = L;
+			function G(L, B, l1, S) {
+				const { c: A, h: M } = L;
 				return [
-					M("header", b, [q("ui-banner", A.default, x)]),
-					M("main", P, [
-						M("section", V, [q("ui-content-block", u.default, g)]),
+					M("header", b, [A("ui-banner", P.default, q)]),
+					M("main", k, [
+						M("section", H, [A("ui-content-block", u.default, g)]),
 					]),
-					M("footer", e1, [q("ui-footer", _.default, H1)]),
+					M("footer", e1, [A("ui-footer", _.default, H1)]),
 				];
 			}
-			var k = C.registerTemplate(G);
+			var w = C.registerTemplate(G);
 			(G.stylesheets = []),
 				N && G.stylesheets.push.apply(G.stylesheets, N),
 				(G.stylesheetToken = "lwc-5nlemrqkqrg"),
 				(G.legacyStylesheetToken = "base-app_app"),
 				C.freezeTemplate(G);
-			class X extends C.LightningElement {}
-			var z1 = C.registerComponent(X, {
-				tmpl: k,
+			class $ extends C.LightningElement {}
+			var z1 = C.registerComponent($, {
+				tmpl: w,
 				sel: "base-app",
 				apiVersion: 60,
 			});

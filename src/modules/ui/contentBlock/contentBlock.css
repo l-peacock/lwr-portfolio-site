@@ -57,3 +57,13 @@ p {
 		transform: rotate(0deg);
 	}
 }
+
+@media (prefers-color-scheme: dark) {
+	h1 {
+		background-color: #292737;
+	}
+
+	h1:hover {
+		background-color: #333045;
+	}
+}

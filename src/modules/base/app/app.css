@@ -54,3 +54,13 @@ footer {
 		flex-direction: row;
 	}
 }
+
+@media (prefers-color-scheme: dark) {
+	:host {
+		background-color: #14131b;
+	}
+
+	main {
+		color: #eee;
+	}
+}
