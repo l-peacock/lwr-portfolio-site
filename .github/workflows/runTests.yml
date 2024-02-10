@@ -1,0 +1,49 @@
+# Run all Jest tests in the project on Pull Request
+# If any tests fail, or if there is insufficient code coverage, the pull request will be blocked.
+
+# This yaml is based on the example provided here:
+# https://joelhooks.com/jest-and-github-actions/
+
+name: Run Tests
+
+on: [pull_request]
+
+jobs:
+  Run_Jest_Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install npm and run jest tests
+        uses: actions/setup-node@v4
+        with:
+          node-version: "21"
+      - run: npm install
+      - run: npm run test:validate
+
+      - name: Tests Passed ✅
+        if: ${{ success() }}
+        run: |
+          curl --request POST \
+          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --data '{
+            "context": "tests",
+            "state": "success",
+            "description": "Tests passed",
+            "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          }'
+
+      - name: Test Failure ⛔️
+        if: ${{ failure() }}
+        run: |
+          curl --request POST \
+          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --data '{
+            "context": "tests",
+            "state": "failure",
+            "description": "Tests failed",
+            "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          }'

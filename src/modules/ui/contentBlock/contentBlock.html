@@ -1,9 +1,6 @@
 <template>
-	<h1><span class="emoji-wave">👋</span> I'm Lachie</h1>
-	<p>
-		I'm a software developer based in Melbourne, Australia. Passionate about
-		building beautiful, high-quality software. I have extensive experience
-		working with Salesforce, as well as full-stack JavaScript development.
-	</p>
-	<p>Besides being a dev, I love music and photography.</p>
+	<h1><span lwc:if={showWaveEmoji} class="emoji-wave">👋</span>{heading}</h1>
+	<template iterator:p={paragraphs}>
+		<p key={p.value}>{p.value}</p>
+	</template>
 </template>

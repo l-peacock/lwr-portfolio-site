@@ -1,5 +1,9 @@
 import { LightningElement, api } from "lwc";
 
+/**
+ * A hero image banner, which displays a title and a subtitle for the page
+ * It provides a optional typewriter effect for the title
+ */
 export default class Banner extends LightningElement {
 	/**
 	 * The title to display in the banner
@@ -7,6 +11,11 @@ export default class Banner extends LightningElement {
 	 */
 	@api
 	get title() {
+		if (this._title === undefined || this._title === null)
+			console.warn(
+				"ui-banner should be provided with a `title` property, received:",
+				this._title,
+			);
 		return this._title;
 	}
 	set title(value) {
@@ -25,21 +34,23 @@ export default class Banner extends LightningElement {
 		this._subtitle = value;
 	}
 
+	/**
+	 * Animates the title with a typewriter effect
+	 * @type {boolean}
+	 */
 	@api
-	get showBackgroundImage() {
-		return this._showBackgroundImage;
+	get typeWriterEffect() {
+		return this._typeWriterEffect;
 	}
-	set showBackgroundImage(value) {
-		this._showBackgroundImage = value;
+	set typeWriterEffect(value) {
+		this._typeWriterEffect = value;
 	}
 
-	get computedClasses() {
-		return this.showBackgroundImage === true
-			? `banner-wrapper background-image`
-			: `banner-wrapper`;
+	get headingClasses() {
+		return this.typeWriterEffect === true ? `typewriter` : null;
 	}
 
 	_title;
 	_subtitle;
-	_showBackgroundImage = false;
+	_typeWriterEffect = true;
 }

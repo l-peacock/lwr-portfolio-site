@@ -29,6 +29,7 @@ p {
 	transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
 	display: inline-block;
 	transition: all 200ms ease-out;
+	margin-right: 0.5rem;
 }
 
 @keyframes wave {
