@@ -10,9 +10,9 @@ The directory structure is as follows:
 
 ```
 .github/
-  └── workflows/		// Workflows for use in GitHub actions
+  └── workflows/        // Workflows for use in GitHub actions
       └── *
-docs/					// the current build of the site, as served on GitHub pages
+docs/                   // the current build of the site, as served on GitHub pages
 src/
   ├── assets/           // static assets, such as images
   │   └── *
@@ -23,7 +23,7 @@ src/
       └── ui/           // low-level front-end components
           └── *
 lwr.config.json         // lwr configuration
-jest.config.json		// jest testing framework configuration
+jest.config.json        // jest testing framework configuration
 package.json            // npm packaging configuration
 ```
 
