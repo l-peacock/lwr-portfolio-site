@@ -11,6 +11,11 @@ export default class Banner extends LightningElement {
 	 */
 	@api
 	get title() {
+		if (this._title === undefined || this._title === null)
+			console.warn(
+				"ui-banner should be provided with a `title` property, received:",
+				this._title,
+			);
 		return this._title;
 	}
 	set title(value) {
@@ -39,12 +44,6 @@ export default class Banner extends LightningElement {
 	}
 	set typeWriterEffect(value) {
 		this._typeWriterEffect = value;
-	}
-
-	get computedClasses() {
-		return this.showBackgroundImage === true
-			? `banner-wrapper background-image`
-			: `banner-wrapper`;
 	}
 
 	get headingClasses() {
