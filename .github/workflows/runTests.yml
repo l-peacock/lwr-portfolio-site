@@ -9,7 +9,7 @@ name: Run Tests
 on: [pull_request]
 
 jobs:
-  test:
+  Run_Jest_Tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
