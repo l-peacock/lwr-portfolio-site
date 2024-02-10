@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: "12"
       - run: npm install
-      - run: npm run test:unit:coverage:
+      - run: npm run test:unit:coverage
 
       - name: Tests Passed ✅
         if: ${{ success() }}
