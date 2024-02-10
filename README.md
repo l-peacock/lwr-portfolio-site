@@ -1,69 +1,37 @@
 # LWR Portfolio Site
 
-This simple LWR Application serves as my portfolio website.
+This simple LWR Application serves as my portfolio website. It is hosted on GitHub Pages at [lachlanpeacock.com](https://lachlanpeacock.com)
 
-## Project Setup
+The repository also contains examples of high-quality coding and documentation standards, unit testing, and Pull Request validation via GitHub Actions.
 
-The directory structure looks like this:
+## Project Structure
+
+The directory structure is as follows:
 
 ```
+.github/
+  └── workflows/		// Workflows for use in GitHub actions
+      └── *
+docs/					// the current build of the site, as served on GitHub pages
 src/
-  ├── assets/           // static assets
-  │   └── recipes-logo.png
+  ├── assets/           // static assets, such as images
+  │   └── *
   |   └── favicon.ico
   └── modules/          // lwc modules
       └── base/         // base level components and app content
           └── *
-      └── ui/           // front-end components
+      └── ui/           // low-level front-end components
           └── *
 lwr.config.json         // lwr configuration
+jest.config.json		// jest testing framework configuration
 package.json            // npm packaging configuration
 ```
 
-## Configuration
-
-The LWR server is configured in `lwr.config.json`, at the root of the project.
-
-```json
-// lwr.config.json
-{
-	"lwc": { "modules": [{ "dir": "$rootDir/src/modules" }] },
-	"routes": [
-		{
-			"id": "base",
-			"path": "/",
-			"rootComponent": "base/app"
-		}
-	],
-	"assets": [
-		{
-			"alias": "assetsDir",
-			"dir": "$rootDir/src/assets",
-			"urlPath": "/public/assets"
-		},
-		{
-			"alias": "favicon",
-			"file": "$rootDir/src/assets/favicon.ico",
-			"urlPath": "/favicon.ico"
-		}
-	]
-}
-```
-
-## Running the Project in dev Mode
+## Running the Project locally in dev Mode
 
 ```bash
 yarn install
-yarn dev # dev:compat for AMD format
-```
-
-Open the site at [http://localhost:3000](http://localhost:3000)
-
-## Statically Generate and Preview the Site
-
-```bash
-yarn build # dev:prod-compat for AMD format
-yarn start
+yarn dev
 ```
 
 Open the site at [http://localhost:3000](http://localhost:3000)
@@ -72,8 +40,18 @@ Open the site at [http://localhost:3000](http://localhost:3000)
 
 This application is served on GitHub pages. It will serve the build in the `docs/` directory in the `main` branch.
 
-Create a new build of the app (see below), and move the output into the `docs/` directory.
+Create a new build of the app (see below). Make sure to preserve any metadata defined in `index.html`.
 
 ```bash
 yarn build:prod-compat
+```
+
+## Unit Testing
+
+This project utilises the jest testing framework, and enforces at least 70% coverage. Each component should contain a `__tests__` subdirectory, with relevant unit tests for the component.
+
+Run the unit tests and check coverage requirements:
+
+```bash
+yarn test:unit:coverage
 ```
