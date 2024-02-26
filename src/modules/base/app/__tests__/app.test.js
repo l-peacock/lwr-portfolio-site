@@ -29,4 +29,14 @@ describe("base-app", () => {
 		const footerEl = element.shadowRoot.querySelector("footer");
 		expect(footerEl).toBeTruthy();
 	});
+
+	// This test will check this specific component
+	// but it will also check the general accessibility status of the whole application in its default state
+	it("is accessible", async () => {
+		document.body.appendChild(element);
+		await Promise.resolve();
+
+		await expect(element).toBeAccessible();
+		await expect(document).toBeAccessible();
+	});
 });

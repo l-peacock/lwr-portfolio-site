@@ -30,4 +30,10 @@ describe("ui-footer", () => {
 		const linkEls = element.shadowRoot.querySelectorAll("a");
 		expect(linkEls.length).toBeGreaterThan(0);
 	});
+
+	it("is accessible", async () => {
+		document.body.appendChild(element);
+		await Promise.resolve();
+		expect(element).toBeAccessible();
+	});
 });

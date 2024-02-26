@@ -1,8 +1,12 @@
+const setupFilesAfterEnv = [];
+setupFilesAfterEnv.push("<rootDir>/jest-sa11y-setup.js");
+
 export default {
 	preset: "@lwc/jest-preset",
 	moduleNameMapper: {
 		"^(base|ui)/(.+)": "<rootDir>/src/modules/$1/$2/$2",
 	},
+	setupFilesAfterEnv,
 	collectCoverage: true,
 	collectCoverageFrom: [
 		"src/modules/**/**/*.{js,ts}",

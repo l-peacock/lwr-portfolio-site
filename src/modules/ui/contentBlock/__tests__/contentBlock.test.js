@@ -52,4 +52,10 @@ describe("ui-content-block", () => {
 		const wavingHandEl = element.shadowRoot.querySelector("span.emoji-wave");
 		expect(wavingHandEl).toBeTruthy();
 	});
+
+	it("is accessible", async () => {
+		document.body.appendChild(element);
+		await Promise.resolve();
+		expect(element).toBeAccessible();
+	});
 });

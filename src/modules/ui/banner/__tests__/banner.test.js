@@ -63,4 +63,15 @@ describe("ui-banner", () => {
 		typeWriterEl = element.shadowRoot.querySelector("div.typewriter");
 		expect(typeWriterEl).toBeTruthy();
 	});
+
+	it("is accessible", async () => {
+		const testTitle = "I am a title";
+		const testSubtitle = "I am a subtitle";
+		element.title = testTitle;
+		element.subtitle = testSubtitle;
+
+		document.body.appendChild(element);
+		await Promise.resolve();
+		expect(element).toBeAccessible();
+	});
 });
