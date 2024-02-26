@@ -1,29 +1,16 @@
 <template>
-	<span>© {currentYear} Lachlan Peacock</span>
+	<span>{footerText}</span>
 
 	<div>
-		<a
-			href="https://www.linkedin.com/in/lachlan-peacock/"
-			aria-label="Lachlan's LinkedIn Profile"
-			target="_blank"
-		>
-			<ui-icon icon-name="linkedin"></ui-icon>
-		</a>
-
-		<a
-			href="https://github.com/l-peacock"
-			aria-label="Lachlan's GitHub Profile"
-			target="_blank"
-		>
-			<ui-icon icon-name="github"></ui-icon>
-		</a>
-
-		<a
-			href="https://www.salesforce.com/trailblazer/lachlan-peacock"
-			aria-label="Lachlan's Salesforce Trailblazer Profile"
-			target="_blank"
-		>
-			<ui-icon icon-name="salesforce"></ui-icon>
-		</a>
+		<template iterator:link={iconLinks}>
+			<a
+				key={link.value.index}
+				href={link.value.href}
+				aria-label={link.value.ariaLabel}
+				target={link.value.target}
+			>
+				<ui-icon icon-name={link.value.iconName}></ui-icon>
+			</a>
+		</template>
 	</div>
 </template>
