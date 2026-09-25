@@ -34,6 +34,6 @@ describe("ui-icon", () => {
 		element.iconName = "linkedin";
 		document.body.appendChild(element);
 		await Promise.resolve();
-		expect(element).toBeAccessible();
+		await expect(element).toBeAccessible();
 	});
 });

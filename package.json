@@ -12,38 +12,48 @@
 		"test:unit:coverage": "jest --coverage",
 		"test:unit:watch": "jest --watch",
 		"test:validate": "jest --ci --reporters='default' --reporters='./github-actions-reporter'",
-		"build": "lwr build --output docs",
-		"build:prod-compat": "lwr build --mode prod-compat --output docs",
+		"lint": "eslint src",
+		"lint:fix": "eslint src --fix",
+		"build": "lwr build --output docs --clean",
+		"build:prod-compat": "lwr build --mode prod-compat --output docs --clean",
 		"start": "lwr start",
 		"stage": "yarn build && yarn start",
 		"stage:prod-compat": "yarn build:prod-compat && yarn start"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^6.5.1",
-		"@fortawesome/free-brands-svg-icons": "^6.5.1",
-		"@fortawesome/free-regular-svg-icons": "^6.5.1",
-		"@fortawesome/free-solid-svg-icons": "^6.5.1",
-		"execa": "^8.0.1",
-		"lwc": "5.0.0",
-		"lwr": "0.11.12",
-		"onetime": "^7.0.0"
+		"@fortawesome/fontawesome-svg-core": "^7.3.1",
+		"@fortawesome/free-brands-svg-icons": "^7.3.1",
+		"@fortawesome/free-regular-svg-icons": "^7.3.1",
+		"@fortawesome/free-solid-svg-icons": "^7.3.1",
+		"lwc": "^9.4.3",
+		"lwr": "^0.24.1"
 	},
 	"engines": {
-		"node": ">=16.0.0"
+		"node": ">=22.22.1"
 	},
 	"volta": {
-		"node": "18.16.1"
+		"node": "24.21.0"
 	},
 	"devDependencies": {
-		"@lwc/jest-preset": "^14.3.0",
-		"@sa11y/jest": "^6.5.1",
-		"@testing-library/dom": "^9.3.4",
-		"jest": "^29.7.0",
-		"jest-environment-jsdom": "^29.7.0",
-		"lint-staged": "^15.2.0",
-		"prettier": "3.2.4"
+		"@babel/eslint-parser": "^7.29.9",
+		"@eslint/js": "^9.39.5",
+		"@lwc/eslint-plugin-lwc": "^3.5.0",
+		"@lwc/jest-preset": "^19.6.1",
+		"@sa11y/jest": "^8.1.1",
+		"eslint": "^9.39.5",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-jest": "^29.16.6",
+		"globals": "^17.12.0",
+		"jest": "^30.5.2",
+		"jest-environment-jsdom": "^30.5.2",
+		"lint-staged": "^17.5.1",
+		"prettier": "3.9.9"
 	},
 	"lint-staged": {
-		"*.{js,css,md}": "prettier --write"
+		"*.js": [
+			"eslint --fix",
+			"prettier --write"
+		],
+		"*.{css,md}": "prettier --write"
 	}
 }

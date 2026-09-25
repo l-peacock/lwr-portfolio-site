@@ -44,6 +44,6 @@ describe("ui-footer", () => {
 	it("is accessible", async () => {
 		document.body.appendChild(element);
 		await Promise.resolve();
-		expect(element).toBeAccessible();
+		await expect(element).toBeAccessible();
 	});
 });

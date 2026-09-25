@@ -72,6 +72,6 @@ describe("ui-banner", () => {
 
 		document.body.appendChild(element);
 		await Promise.resolve();
-		expect(element).toBeAccessible();
+		await expect(element).toBeAccessible();
 	});
 });

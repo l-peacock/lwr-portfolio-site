@@ -37,7 +37,7 @@ const MAIN_CONTENT = {
 	},
 	DEVELOPER_INFO: {
 		introduction: {
-			text: "I see you, checking out the dev console 👀",
+			text: "I see you, checking out the dev console 👀👨‍💻",
 			style:
 				"color: white; font-family: monospace; font-size: 1rem; padding: 0.5rem; border-radius: 0.5rem; background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,0.7693671218487395) 0%, rgba(145,20,0,0.77) 85%, rgba(126,0,0,0.77) 100%);",
 		},

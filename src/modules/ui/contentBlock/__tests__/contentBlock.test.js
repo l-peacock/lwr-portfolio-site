@@ -56,6 +56,6 @@ describe("ui-content-block", () => {
 	it("is accessible", async () => {
 		document.body.appendChild(element);
 		await Promise.resolve();
-		expect(element).toBeAccessible();
+		await expect(element).toBeAccessible();
 	});
 });
