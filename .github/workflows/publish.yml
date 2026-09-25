@@ -1,0 +1,91 @@
+# Builds the production site on every push to main and opens (or updates) a
+# PR with the result, so a developer never runs the LWR build locally and
+# main never receives a direct push from CI. Re-runs the same checks as the
+# PR quality gate first, as a safety net — a push to main that skipped or
+# bypassed those checks will fail here instead of silently publishing a
+# broken build.
+#
+# paths-ignore on docs/** is load-bearing, not cosmetic: the build embeds a
+# random OpenTelemetry trace id on every run, so docs/ always differs from
+# the previous build even with zero source changes. Without paths-ignore,
+# merging this workflow's own publish PR (a push to main) would immediately
+# re-trigger it, opening another publish PR, forever.
+#
+# Requires, one-time, in this repo's Settings:
+#   - Actions → General → Workflow permissions → "Read and write permissions"
+#     (so GITHUB_TOKEN can push the publish branch and open the PR).
+#   - General → Pull Requests → "Allow auto-merge" (so the last step below
+#     can enable it on the publish PR).
+#
+# Known limitation: the publish PR is opened with the default GITHUB_TOKEN,
+# and GitHub deliberately does not let a GITHUB_TOKEN-authored PR trigger
+# other workflows (recursion prevention) — so runTests.yml's quality gate
+# will NOT run again on this PR. That's fine if main's branch protection
+# doesn't name that specific check as required (this workflow already ran
+# the same checks above), or if it only requires review. If it *is* named as
+# a required check, auto-merge will stall waiting for a run that never
+# starts — the fix is a personal access token (stored as a secret) in place
+# of GITHUB_TOKEN for the steps below, since PRs opened with a PAT trigger
+# workflows normally.
+
+name: Publish to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "docs/**"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: publish-to-pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - run: npm ci
+      - run: npx prettier --check .
+      - run: npm run lint
+      - run: npm run test:validate
+      - run: npm run build:prod-compat
+
+      - name: Open or update the publish PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add docs
+          if git diff --staged --quiet; then
+            echo "No changes to publish."
+            exit 0
+          fi
+
+          branch="automated/publish-docs"
+          git switch -C "$branch"
+          git commit -m "chore: publish site build"
+          git push --force origin "$branch"
+
+          if [ "$(gh pr view "$branch" --json state -q .state 2>/dev/null)" = "OPEN" ]; then
+            echo "Publish PR already open for $branch, updated in place."
+          else
+            gh pr create \
+              --base main \
+              --head "$branch" \
+              --title "chore: publish site build" \
+              --body "Automated production build from ${GITHUB_SHA}, opened by the publish workflow."
+          fi
+
+          gh pr merge "$branch" --squash --auto --delete-branch

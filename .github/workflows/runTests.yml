@@ -1,12 +1,15 @@
-# Run formatting, linting and all Jest tests in the project on Pull Request
-# If any check fails, or if there is insufficient code coverage, the pull request will be blocked.
+# Quality gate: formatting, linting and all Jest tests, run on every Pull
+# Request targeting develop or main. If any check fails, or if there is
+# insufficient code coverage, the pull request will be blocked.
 
 # This yaml is based on the example provided here:
 # https://joelhooks.com/jest-and-github-actions/
 
 name: Run Tests
 
-on: [pull_request]
+on:
+  pull_request:
+    branches: [develop, main]
 
 jobs:
   Run_Jest_Tests:
@@ -17,7 +20,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "24"
-      - run: npm install
+      - run: npm ci
       - run: npx prettier --check .
       - run: npm run lint
       - run: npm run test:validate

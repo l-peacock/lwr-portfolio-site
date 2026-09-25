@@ -70,14 +70,36 @@ from CI.
 
 ## CI
 
-`.github/workflows/runTests.yml` runs on every PR: Prettier check → ESLint →
-`test:validate`. Any failure blocks the merge.
+- **`.github/workflows/runTests.yml`** — quality gate. Runs on every PR
+  targeting `develop` or `main`: Prettier check → ESLint → `test:validate`.
+  This only runs the checks; whether a failing check actually _blocks_
+  merging depends on the repo's branch protection rules (Settings → Branches),
+  which aren't configurable from a workflow file — confirm `develop`/`main`
+  have "require status checks to pass" enabled if that's the intent.
+- **`.github/workflows/publish.yml`** — auto-publish, PR-based. Runs on every
+  push to `main` (`paths-ignore: docs/**`, see Publishing below for why
+  that's essential, not incidental). Re-runs the same three checks as a
+  safety net, builds, then force-pushes the result to a standing
+  `automated/publish-docs` branch and opens (or updates) a PR from it into
+  `main`, with auto-merge enabled — no developer ever runs the LWR build or
+  clicks merge. Requires two one-time repo settings: Settings → Actions →
+  General → Workflow permissions → "Read and write permissions" (so
+  `GITHUB_TOKEN` can push the branch and open the PR), and Settings → General
+  → Pull Requests → "Allow auto-merge". See the workflow file's header
+  comment for a real limitation this design has: PRs opened with the default
+  `GITHUB_TOKEN` don't trigger other workflows, so `runTests.yml` won't
+  re-run on the publish PR itself — harmless unless branch protection names
+  that specific check as required, in which case auto-merge will stall (fix:
+  a PAT instead of `GITHUB_TOKEN` for this workflow).
 
 ## Publishing
 
+Push to `main` (e.g. by merging a PR from `develop`) and
+`.github/workflows/publish.yml` opens a PR with the built `docs/` and merges
+it automatically — see CI above. To build locally instead:
 `npm run build:prod-compat` runs `lwr build --mode prod-compat --output docs
---clean` — a full clean build straight into `docs/`. Commit the resulting
-`docs/` diff on `main` to publish.
+--clean`, a full clean build straight into `docs/`; commit the resulting diff
+yourself if you go this route.
 
 All page metadata is config-driven, not hand-edited into build output:
 
