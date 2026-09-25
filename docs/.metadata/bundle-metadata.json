@@ -1,40 +1,46 @@
 {
   "bundles": {
-    "lwc": {
-      "version": "5.0.0",
-      "path": "/1/bundle/amd/l/en-US/bi/0/module/mi/lwc/v/5_0_0/s/b005bb4c2c907fd35a0797f2b8899108a9a5b779/bundle_lwc.js",
+    "lwc|v/9_4_3": {
+      "version": "9.4.3",
+      "path": "/1/bundle/amd/l/en-US/bi/0/module/mi/lwc/v/9_4_3/s/sha256-n15OZJNSIXdIxRrJp4bjsrK92PHZU0kX0E-Y3h5W7So/bundle_lwc.js",
       "includedModules": [],
       "imports": [],
-      "dynamicImports": []
+      "dynamicImports": [],
+      "integrity": "sha256-n15OZJNSIXdIxRrJp4bjsrK92PHZU0kX0E+Y3h5W7So="
     },
-    "@lwrjs/app-service/base/module/amd": {
-      "version": "0.11.12",
-      "path": "/1/bundle/amd/l/en-US/bi/0/module/mi/@lwrjs/app-service/base/module/amd/v/0_11_12/s/b9ca23b180a88e7c34575ab82d724cac477aebac/bundle_@lwrjs_app-service_base_module_amd.js",
+    "@lwrjs/app-service/base/module/amd|v/0_24_1": {
+      "version": "0.24.1",
+      "path": "/1/bundle/amd/l/en-US/bi/0/module/mi/@lwrjs/app-service/base/module/amd/v/0_24_1/s/sha256-RXX6JFDmjFU4X9wGXrov576FRNo08CpR-UfPYu0bpR0/bundle_@lwrjs_app-service_base_module_amd.js",
       "includedModules": [
-        "lwr/metrics/v/0_11_12",
-        "lwr/init/v/0_11_12",
-        "lwr/preInit/v/0_11_12"
+        "lwr/scheduler|v/0_24_1",
+        "lwr/metrics|v/0_24_1",
+        "lwr/init|v/0_24_1",
+        "lwr/preInit|v/0_24_1"
       ],
       "imports": [
-        "lwc/v/5_0_0"
+        "lwr/profiler|v/0_24_1",
+        "lwc|v/9_4_3",
+        "lwr/loader|v/0_24_1"
       ],
-      "dynamicImports": []
+      "dynamicImports": [],
+      "integrity": "sha256-RXX6JFDmjFU4X9wGXrov576FRNo08CpR+UfPYu0bpR0="
     },
-    "base/app": {
+    "base/app|v/0_0_1": {
       "version": "0.0.1",
-      "path": "/1/bundle/amd/l/en-US/bi/0/module/mi/base/app/v/0_0_1/s/0f798e6ebc629f88cd662ab48f1562237f0c4642/bundle_base_app.js",
+      "path": "/1/bundle/amd/l/en-US/bi/0/module/mi/base/app/v/0_0_1/s/sha256-FKYQqV7sw4RbmYMRVngFSpvqVHANXPwzn6P3QvIZFps/bundle_base_app.js",
       "includedModules": [
-        "@fortawesome/free-brands-svg-icons/v/6_5_1",
-        "@fortawesome/fontawesome-svg-core/v/6_5_1",
-        "ui/icon/v/0_0_1",
-        "ui/footer/v/0_0_1",
-        "ui/contentBlock/v/0_0_1",
-        "ui/banner/v/0_0_1"
+        "@fortawesome/free-brands-svg-icons|v/7_3_1",
+        "@fortawesome/fontawesome-svg-core|v/7_3_1",
+        "ui/icon|v/0_0_1",
+        "ui/footer|v/0_0_1",
+        "ui/contentBlock|v/0_0_1",
+        "ui/banner|v/0_0_1"
       ],
       "imports": [
-        "lwc/v/5_0_0"
+        "lwc|v/9_4_3"
       ],
-      "dynamicImports": []
+      "dynamicImports": [],
+      "integrity": "sha256-FKYQqV7sw4RbmYMRVngFSpvqVHANXPwzn6P3QvIZFps="
     }
   }
 }
