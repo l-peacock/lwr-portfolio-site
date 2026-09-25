@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(sf org login*)",
+      "Bash(sfdx force:auth*)",
+      "Bash(sf force:auth*)",
+      "Bash(sf org logout*)",
+      "Bash(sf org delete*)",
+      "Bash(sf alias set*)",
+      "Bash(sf config set target-org*)",
+      "Bash(sf config set defaultusername*)",
+      "Read(**/.sfdx/**)",
+      "Read(**/.sf/**)",
+      "Read(~/.sfdx/**)",
+      "Read(~/.sf/**)"
+    ]
+  },
+  "enabledPlugins": {
+    "ponytail@ponytail": true
+  }
+}

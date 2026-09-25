@@ -1,5 +1,5 @@
-# Run all Jest tests in the project on Pull Request
-# If any tests fail, or if there is insufficient code coverage, the pull request will be blocked.
+# Run formatting, linting and all Jest tests in the project on Pull Request
+# If any check fails, or if there is insufficient code coverage, the pull request will be blocked.
 
 # This yaml is based on the example provided here:
 # https://joelhooks.com/jest-and-github-actions/
@@ -16,8 +16,10 @@ jobs:
       - name: Install npm and run jest tests
         uses: actions/setup-node@v4
         with:
-          node-version: "21"
+          node-version: "24"
       - run: npm install
+      - run: npx prettier --check .
+      - run: npm run lint
       - run: npm run test:validate
 
       - name: Tests Passed ✅

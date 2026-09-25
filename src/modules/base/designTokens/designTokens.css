@@ -1,0 +1,78 @@
+/*
+ * "Morning Sky" design tokens — shared with the Salesforce Experience Cloud
+ * portfolio site (see the `portfolio-design-system` skill for the full
+ * rationale, palette, type scale and voice/tone rules).
+ *
+ * CSS-only LWC module: import it at the top of a component's own .css file
+ * and consume the custom properties it sets on :host — LWC re-applies the
+ * :host rule to whichever component imports it.
+ *
+ *   @import "base/designTokens";
+ *
+ *   :host {
+ *     color: var(--portfolio-color-ink);
+ *     background: var(--portfolio-color-cloud);
+ *   }
+ */
+
+:host {
+	/* Color */
+	--portfolio-color-ink: #1b2440;
+	--portfolio-color-cloud: #f7f8fb;
+	--portfolio-color-cloud-2: #eef1f7;
+	--portfolio-color-sky: #5b7fde;
+	--portfolio-color-sky-strong: #3f63c7;
+	--portfolio-color-sky-a15: rgba(91, 127, 222, 0.15);
+	--portfolio-color-citrus: #ff9f5a;
+	--portfolio-color-mint: #8fd6bd;
+	--portfolio-color-slate: #6b7280;
+	--portfolio-color-hero-bg: #1b2440;
+
+	/* Typography — Sora/JetBrains Mono aren't loaded as web fonts yet, so
+	   these fall back to system stacks until @font-face is wired up. */
+	--portfolio-font-sans:
+		"Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	--portfolio-font-mono:
+		"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+	--portfolio-font-size-display: 3rem;
+	--portfolio-font-size-h1: 2rem;
+	--portfolio-font-size-h2: 1.5rem;
+	--portfolio-font-size-h3: 1.1875rem;
+	--portfolio-font-size-body: 1rem;
+	--portfolio-font-size-small: 0.875rem;
+	--portfolio-font-size-mono-tag: 0.8125rem;
+	--portfolio-font-weight-regular: 400;
+	--portfolio-font-weight-medium: 500;
+	--portfolio-font-weight-semibold: 600;
+	--portfolio-line-height-body: 1.6;
+	--portfolio-line-height-heading: 1.25;
+	--portfolio-measure: 70ch;
+
+	/* Border radius */
+	--portfolio-radius-sm: 6px;
+	--portfolio-radius-md: 12px;
+	--portfolio-radius-lg: 20px;
+	--portfolio-radius-pill: 999px;
+
+	/* Elevation — tinted with Sky rather than flat black */
+	--portfolio-shadow-sm: 0 1px 3px rgba(91, 127, 222, 0.12);
+	--portfolio-shadow-md: 0 8px 24px rgba(91, 127, 222, 0.16);
+	--portfolio-shadow-lg: 0 20px 50px rgba(27, 36, 64, 0.18);
+
+	/* Nav chrome */
+	--portfolio-nav-blur: blur(12px);
+	--portfolio-nav-bg: rgba(247, 248, 251, 0.8);
+}
+
+/* Auto dark mode — follows the device, no manual toggle on this site yet. */
+@media (prefers-color-scheme: dark) {
+	:host {
+		--portfolio-color-cloud: #0f1524;
+		--portfolio-color-cloud-2: #161d30;
+		--portfolio-color-ink: #e6e9f2;
+		--portfolio-color-slate: #9aa3b5;
+		--portfolio-color-sky-strong: #8ca6ea;
+		--portfolio-color-hero-bg: #1e2740;
+		--portfolio-nav-bg: rgba(15, 21, 36, 0.8);
+	}
+}
