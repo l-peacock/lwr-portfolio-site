@@ -14,8 +14,8 @@
 		"test:validate": "jest --ci --reporters='default' --reporters='./github-actions-reporter'",
 		"lint": "eslint src",
 		"lint:fix": "eslint src --fix",
-		"build": "lwr build --output docs",
-		"build:prod-compat": "lwr build --mode prod-compat --output docs",
+		"build": "lwr build --output docs --clean",
+		"build:prod-compat": "lwr build --mode prod-compat --output docs --clean",
 		"start": "lwr start",
 		"stage": "yarn build && yarn start",
 		"stage:prod-compat": "yarn build:prod-compat && yarn start"

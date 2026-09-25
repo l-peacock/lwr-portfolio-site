@@ -6,7 +6,14 @@
 		{
 			"id": "base",
 			"path": "/",
-			"rootComponent": "base/app"
+			"rootComponent": "base/app",
+			"layoutTemplate": "$layoutsDir/main.html",
+			"properties": {
+				"title": "Lachlan Peacock",
+				"description": "My personal website and portfolio!",
+				"keywords": "Lachlan, Peacock, JavaScript, Salesforce, Developer",
+				"author": "Lachlan Peacock"
+			}
 		}
 	],
 	"assets": [
@@ -19,6 +26,16 @@
 			"alias": "favicon",
 			"file": "$rootDir/src/assets/favicon.ico",
 			"urlPath": "/favicon.ico"
+		},
+		{
+			"alias": "cname",
+			"file": "$rootDir/src/CNAME",
+			"urlPath": "/CNAME"
+		},
+		{
+			"alias": "nojekyll",
+			"file": "$rootDir/src/.nojekyll",
+			"urlPath": "/.nojekyll"
 		}
 	]
 }

@@ -1,14 +1,18 @@
 {
   "resources": {
-    "lwr-error-shim.js": {
-      "path": "/1/resource/amd/lwr-error-shim.js/v/0_11_12/lwr-error-shim.js",
+    "lwr-loader-shim.bundle.min.js|v/0_24_1": {
+      "path": "/1/resource/amd/lwr-loader-shim.bundle.min.js/v/0_24_1/lwr-loader-shim.bundle.min.js",
       "mimeType": "application/javascript",
-      "inline": true
+      "inline": false,
+      "version": "0.24.1",
+      "integrity": "sha256-ilgbD2gz2k9YCbXVjaKk8aH40xY7eVUvr/fH3PGigZk="
     },
-    "lwr-loader-shim.bundle.min.js": {
-      "path": "/1/resource/amd/lwr-loader-shim.bundle.min.js/v/0_11_12/lwr-loader-shim.bundle.min.js",
+    "lwr-error-shim.js|v/0_24_1": {
+      "path": "/1/resource/amd/lwr-error-shim.js/v/0_24_1/lwr-error-shim.js",
       "mimeType": "application/javascript",
-      "inline": false
+      "inline": true,
+      "version": "0.24.1",
+      "integrity": "sha256-HvYzs8juO0Nfew5m4zL/Xz9mtA+GnGDXN9C6oWEt60w="
     }
   }
 }

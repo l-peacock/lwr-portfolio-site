@@ -17,6 +17,10 @@ src/
   ├── assets/           // static assets, such as images
   │   └── *
   |   └── favicon.ico
+  ├── layouts/          // the HTML document shell (title/meta/favicon), config-driven — see below
+  │   └── main.html
+  ├── CNAME             // GitHub Pages custom domain, copied into docs/ on every build
+  ├── .nojekyll         // disables Jekyll processing on GitHub Pages, copied into docs/ on every build
   └── modules/          // lwc modules
       └── base/         // base level components and app content
           └── *
@@ -40,11 +44,18 @@ Open the site at [http://localhost:3000](http://localhost:3000)
 
 This application is served on GitHub pages. It will serve the build in the `docs/` directory in the `main` branch.
 
-Create a new build of the app (see below). Make sure to preserve any metadata defined in `index.html`.
+Create a new build of the app and commit the resulting `docs/` diff:
 
 ```bash
 yarn build:prod-compat
 ```
+
+This always does a full clean build (`--clean`) and writes straight into `docs/`.
+The page title, meta description/keywords/author, and favicon link come from
+`lwr.config.json`'s route `properties` rendered through `src/layouts/main.html`
+(LWR's config-driven layout mechanism), and `CNAME`/`.nojekyll` are declared as
+assets sourced from `src/` — all of it is regenerated correctly on every build,
+so there's nothing to hand-edit or preserve in the build output afterward.
 
 ## Unit Testing
 

@@ -3,3 +3,7 @@
 /docs
 /coverage
 /.claude
+
+# Prettier's HTML formatter adds whitespace inside {{ }} / {{{ }}} that
+# breaks BaseViewProvider's substitution regex (see src/layouts/main.html).
+/src/layouts
