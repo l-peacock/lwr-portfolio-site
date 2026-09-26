@@ -29,11 +29,6 @@ main {
 	justify-content: center;
 	padding: 2rem 1rem;
 	min-width: 0;
-	/* Without this, main's own box stretches to fill its whole grid column
-	   on wide screens; capping it (it naturally settles against the column's
-	   start edge once it can't stretch to fill) keeps the links list from
-	   drifting off into empty space instead of sitting near the banner. */
-	max-width: 40rem;
 }
 
 footer {
@@ -59,5 +54,12 @@ footer {
 
 	main {
 		padding: 2rem 3rem;
+		/* Without this, main's own box stretches to fill its whole grid
+		   column on wide screens; capping it (it naturally settles against
+		   the column's start edge once it can't stretch to fill) keeps the
+		   links list from drifting off into empty space instead of sitting
+		   near the banner. Only applies to the desktop side-by-side layout —
+		   on the mobile stacked layout, main should just center normally. */
+		max-width: 40rem;
 	}
 }

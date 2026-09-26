@@ -26,19 +26,19 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-end;
+	align-items: flex-start;
 	gap: 1.5rem;
 	height: 100%;
 	padding: 2rem 1.5rem;
 }
 
 /* Fills the banner's width (rather than shrinking to fit whichever phrase
-   is currently typed), capped at a comfortable reading width — below that
-   cap, `align-items: flex-end` on :host pulls it toward the banner's right
-   edge instead of it sitting flush left on very wide screens. */
+   is currently typed), capped at a comfortable reading width on desktop —
+   see the media query below, where `align-items: flex-end` then pulls it
+   toward the banner's right edge instead of it sitting flush left on very
+   wide screens. On mobile it just stays full width and left-aligned. */
 .banner-wrapper {
 	width: 100%;
-	max-width: 40rem;
 }
 
 h1 {
@@ -98,6 +98,14 @@ h2 {
 @media only screen and (min-width: 1025px) {
 	:host {
 		padding: 3rem;
+		/* Only pulled toward the banner's right edge in the desktop
+		   side-by-side layout — on the mobile stacked layout, the banner
+		   spans the full width on its own and should stay left-aligned. */
+		align-items: flex-end;
+	}
+
+	.banner-wrapper {
+		max-width: 40rem;
 	}
 
 	h1 {
