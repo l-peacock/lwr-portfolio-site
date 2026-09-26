@@ -27,7 +27,7 @@
     },
     "base/app|v/0_0_1": {
       "version": "0.0.1",
-      "path": "/1/bundle/amd/l/en-US/bi/0/module/mi/base/app/v/0_0_1/s/sha256-s88w4XqrUN16FTatod73sRkl3UcrhE4rbf_FEohw8a4/bundle_base_app.js",
+      "path": "/1/bundle/amd/l/en-US/bi/0/module/mi/base/app/v/0_0_1/s/sha256-T8wujHfko0HyGyn9-zlVVuSin7sALYIoMRoRBYP8gHA/bundle_base_app.js",
       "includedModules": [
         "ui/footer|v/0_0_1",
         "@fortawesome/free-solid-svg-icons|v/7_3_1",
@@ -42,7 +42,7 @@
         "lwc|v/9_4_3"
       ],
       "dynamicImports": [],
-      "integrity": "sha256-s88w4XqrUN16FTatod73sRkl3UcrhE4rbf/FEohw8a4="
+      "integrity": "sha256-T8wujHfko0HyGyn9+zlVVuSin7sALYIoMRoRBYP8gHA="
     }
   }
 }
