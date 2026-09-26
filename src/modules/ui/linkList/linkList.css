@@ -1,0 +1,55 @@
+@import "base/designTokens";
+
+:host {
+	display: block;
+	width: 100%;
+	max-width: 22rem;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+a {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.75rem 1.25rem;
+	border-radius: var(--portfolio-radius-pill);
+	border: 1px solid var(--portfolio-color-cloud-2);
+	background-color: var(--portfolio-color-cloud-2);
+	color: var(--portfolio-color-ink);
+	font-family: var(--portfolio-font-sans);
+	font-weight: var(--portfolio-font-weight-medium);
+	font-size: var(--portfolio-font-size-body);
+	text-decoration: none;
+	box-shadow: var(--portfolio-shadow-sm);
+	transition:
+		background-color 200ms ease-in-out,
+		border-color 200ms ease-in-out,
+		color 200ms ease-in-out,
+		box-shadow 200ms ease-in-out;
+}
+
+a:hover,
+a:focus-visible {
+	background-color: var(--portfolio-color-sky-a15);
+	border-color: var(--portfolio-color-sky-strong);
+	color: var(--portfolio-color-sky-strong);
+	box-shadow: var(--portfolio-shadow-md);
+}
+
+ui-icon {
+	--icon-size: 1.25rem;
+	flex-shrink: 0;
+	display: flex;
+}
+
+span {
+	flex: 1;
+}

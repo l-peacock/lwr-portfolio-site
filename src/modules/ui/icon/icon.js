@@ -6,6 +6,7 @@ import {
 	faGithub as github,
 	faSalesforce as salesforce,
 } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe as portfolio } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * Renders the selected icon from the `fontawesome` library.
@@ -29,6 +30,7 @@ export default class Icon extends LightningElement {
 		linkedin,
 		github,
 		salesforce,
+		portfolio,
 	};
 
 	_iconName;

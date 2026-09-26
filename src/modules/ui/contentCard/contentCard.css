@@ -32,7 +32,7 @@ a:hover {
 	color: white;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
 	:host {
 		padding: 1rem 2rem 1rem 2rem;
 	}

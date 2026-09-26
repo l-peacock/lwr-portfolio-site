@@ -1,66 +1,63 @@
+@import "base/designTokens";
+
 :host {
-	font-family: system-ui;
-	display: flex;
-	flex-direction: column;
+	font-family: var(--portfolio-font-sans);
+	color: var(--portfolio-color-ink);
+	background-color: var(--portfolio-color-cloud);
+	display: grid;
+	grid-template-areas:
+		"banner"
+		"links"
+		"footer";
+	grid-template-rows: 1fr auto auto;
 	min-height: 100vh;
 }
 
 header {
-	width: auto;
-}
-
-header > ui-banner {
-	width: auto;
+	grid-area: banner;
+	/* Without this, the nowrap typewriter text inside ui-banner grows the
+	   grid item's automatic minimum size as it types, which grows the whole
+	   "banner" column and visibly shifts the layout. Zeroing it lets the 1fr
+	   track sizing hold the column at a fixed, even split instead. */
+	min-width: 0;
 }
 
 main {
+	grid-area: links;
 	display: flex;
-	gap: 1rem;
-	height: auto;
-	flex-direction: column;
-	width: auto;
-	flex-grow: 1;
-	align-items: flex-start;
-	max-width: 1400px;
-	align-self: center;
-	margin: 0rem 0.5rem 0rem 0.5rem;
-}
-
-section {
-	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
-}
-
-aside {
-	flex-shrink: 1;
-	min-width: 33%;
-	display: flex;
-	flex-direction: column;
-}
-
-h1 {
-	color: #1798c1;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 1rem;
+	min-width: 0;
+	/* Without this, main's own box stretches to fill its whole grid column
+	   on wide screens; capping it (it naturally settles against the column's
+	   start edge once it can't stretch to fill) keeps the links list from
+	   drifting off into empty space instead of sitting near the banner. */
+	max-width: 40rem;
 }
 
 footer {
+	grid-area: footer;
 	margin-top: auto;
-	padding: 0.5rem 1rem 0.5rem 1rem;
+	padding: 0.5rem 1rem;
 }
 
-@media only screen and (min-width: 769px) {
-	main {
-		margin: 30px;
-		flex-direction: row;
-	}
-}
-
-@media (prefers-color-scheme: dark) {
+@media only screen and (min-width: 1025px) {
 	:host {
-		background-color: #14131b;
+		grid-template-areas:
+			"banner links"
+			"banner footer";
+		/* The banner column shares the space evenly with the links column
+		   (both keep growing together on wide screens — no page-level max
+		   width — so the hero's background always reaches the true left
+		   edge; see ui/banner for how its own inner content stays capped),
+		   but won't shrink narrower than 570px — below that, the typewriter
+		   text would need to clip rather than just being tight. */
+		grid-template-columns: minmax(570px, 1fr) 1fr;
+		grid-template-rows: 1fr auto;
 	}
 
 	main {
-		color: #eee;
+		padding: 2rem 3rem;
 	}
 }
