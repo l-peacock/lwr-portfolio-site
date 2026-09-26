@@ -117,15 +117,4 @@ describe("ui-banner", () => {
 		await Promise.resolve();
 		await expect(element).toBeAccessible();
 	});
-
-	it("is accessible", async () => {
-		const testTitle = "I am a title";
-		const testSubtitle = "I am a subtitle";
-		element.title = testTitle;
-		element.subtitle = testSubtitle;
-
-		document.body.appendChild(element);
-		await Promise.resolve();
-		await expect(element).toBeAccessible();
-	});
 });
