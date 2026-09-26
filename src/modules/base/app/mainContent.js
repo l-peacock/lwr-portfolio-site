@@ -1,40 +1,41 @@
 const MAIN_CONTENT = {
 	BANNER: {
-		title: "hello, world!",
+		prefix: "hello, ",
+		titles: ["world!", "friend!", "there!"],
 		subtitle: "Welcome to lachlanpeacock.com",
 		typeWriterEffect: true,
 	},
-	BODY: {
-		heading: "I'm Lachie",
-		showWaveEmoji: true,
-		paragraphs: [
-			"I'm a software developer based in Melbourne, Australia. Passionate about building beautiful, high-quality software. I have extensive experience working with Salesforce, as well as full-stack JavaScript development.",
-			"Besides being a dev, I love music and photography.",
-		],
-	},
-	FOOTER: {
-		text: `© ${new Date().getFullYear()} Lachlan Peacock`,
-		iconLinks: [
-			{
-				href: "https://www.linkedin.com/in/lachlan-peacock/",
-				ariaLabel: "Lachlan's LinkedIn Profile",
-				target: "_blank",
-				iconName: "linkedin",
-			},
-			{
-				href: "https://github.com/l-peacock",
-				ariaLabel: "Lachlan's GitHub Profile",
-				target: "_blank",
-				iconName: "github",
-			},
-			{
-				href: "https://www.salesforce.com/trailblazer/lachlan-peacock",
-				ariaLabel: "Lachlan's Salesforce Trailblazer Profile",
-				target: "_blank",
-				iconName: "salesforce",
-			},
-		],
-	},
+	LINKS: [
+		{
+			label: "portfolio",
+			href: "https://portfolio.lachlanpeacock.com",
+			ariaLabel: "Lachlan's Portfolio",
+			target: "_blank",
+			iconName: "portfolio",
+		},
+		{
+			label: "linkedin",
+			href: "https://www.linkedin.com/in/lachlan-peacock/",
+			ariaLabel: "Lachlan's LinkedIn Profile",
+			target: "_blank",
+			iconName: "linkedin",
+		},
+		{
+			label: "github",
+			href: "https://github.com/l-peacock",
+			ariaLabel: "Lachlan's GitHub Profile",
+			target: "_blank",
+			iconName: "github",
+		},
+		{
+			label: "trailblazer",
+			href: "https://www.salesforce.com/trailblazer/lachlan-peacock",
+			ariaLabel: "Lachlan's Salesforce Trailblazer Profile",
+			target: "_blank",
+			iconName: "salesforce",
+		},
+	],
+	FOOTER: { text: `© ${new Date().getFullYear()} Lachlan Peacock` },
 	DEVELOPER_INFO: {
 		introduction: {
 			text: "I see you, checking out the dev console 👀👨‍💻",

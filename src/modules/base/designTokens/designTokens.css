@@ -27,6 +27,9 @@
 	--portfolio-color-mint: #8fd6bd;
 	--portfolio-color-slate: #6b7280;
 	--portfolio-color-hero-bg: #1b2440;
+	/* Always light — the hero stays dark in both themes, so its
+	   foreground must not flip with --portfolio-color-cloud. */
+	--portfolio-color-hero-fg: #f7f8fb;
 
 	/* Typography — Sora/JetBrains Mono aren't loaded as web fonts yet, so
 	   these fall back to system stacks until @font-face is wired up. */
