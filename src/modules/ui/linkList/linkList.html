@@ -1,0 +1,19 @@
+<template>
+	<nav aria-label="Elsewhere on the web">
+		<ul>
+			<template iterator:link={links}>
+				<li key={link.value.href}>
+					<a
+						href={link.value.href}
+						aria-label={link.value.ariaLabel}
+						target={link.value.target}
+						rel="noopener noreferrer"
+					>
+						<ui-icon icon-name={link.value.iconName}></ui-icon>
+						<span>{link.value.label}</span>
+					</a>
+				</li>
+			</template>
+		</ul>
+	</nav>
+</template>

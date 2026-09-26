@@ -1,4 +1,7 @@
+@import "base/designTokens";
+
 :host {
+	box-sizing: border-box;
 	text-align: center;
 	width: 100%;
 	display: flex;
@@ -7,22 +10,35 @@
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
-	border-top: 2px solid rgba(0, 0, 0, 0.228);
-	padding: 0.5rem 0 0.5rem 0;
+	border-top: 1px solid var(--portfolio-color-sky-a15);
+	padding: 0.5rem 0;
+	font-family: var(--portfolio-font-sans);
+	font-size: var(--portfolio-font-size-small);
+	color: var(--portfolio-color-slate);
+	background-color: var(--portfolio-nav-bg);
+	backdrop-filter: var(--portfolio-nav-blur);
+	-webkit-backdrop-filter: var(--portfolio-nav-blur);
 }
 
 a {
-	color: rgba(0, 0, 0, 0.563);
+	color: var(--portfolio-color-slate);
 	margin: 0.75rem;
+	transition: color 200ms ease-in;
+}
+
+a:hover,
+a:focus-visible {
+	color: var(--portfolio-color-sky-strong);
 }
 
 ui-icon {
 	--icon-size: 3rem; /* Make icons slightly larger on mobile so they are easier to tap */
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
 	:host {
 		flex-direction: row;
+		justify-content: flex-end;
 	}
 
 	ui-icon {
@@ -30,27 +46,6 @@ ui-icon {
 	}
 
 	a {
-		color: rgba(0, 0, 0, 0.501);
 		margin: 0.5rem;
-		transition: all 200ms ease-in;
-	}
-
-	a:hover {
-		color: rgb(0, 0, 0);
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	:host {
-		color: #eee;
-		border-color: #eeeeee97;
-	}
-
-	a {
-		color: #ffffff82;
-	}
-
-	a:hover {
-		color: #eee;
 	}
 }

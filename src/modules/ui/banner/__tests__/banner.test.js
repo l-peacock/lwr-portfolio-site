@@ -10,6 +10,10 @@ describe("ui-banner", () => {
 	});
 
 	afterEach(() => {
+		jest.useRealTimers();
+		jest.restoreAllMocks();
+		delete window.matchMedia;
+
 		// The jsdom instance is shared across test cases in a single file so reset the DOM
 		while (document.body.firstChild) {
 			document.body.removeChild(document.body.firstChild);
@@ -18,50 +22,100 @@ describe("ui-banner", () => {
 
 	it("default properties", () => {
 		document.body.appendChild(element);
-		expect(element.title).toBeUndefined();
+		expect(element.titles).toEqual([]);
 		expect(element.subtitle).toBeUndefined();
 		expect(element.typeWriterEffect).toBe(true);
 	});
 
-	it("should warn in the console when `title` is not set", () => {
+	it("should warn in the console when `titles` is not a non-empty array", () => {
 		const consoleWarnSpy = jest.spyOn(console, "warn");
 		document.body.appendChild(element);
 		expect(consoleWarnSpy).toHaveBeenCalled();
 	});
 
-	it("should render the provided title and subtitle properties", () => {
-		const testTitle = "I am a title";
-		const testSubtitle = "I am a subtitle";
-		element.title = testTitle;
-		element.subtitle = testSubtitle;
+	it("should render the first title immediately when the typewriter effect is disabled", () => {
+		element.titles = ["Static heading"];
+		element.typeWriterEffect = false;
+		element.subtitle = "I am a subtitle";
 
 		document.body.appendChild(element);
 
-		// The `title` property getter, and the rendered `h1` in the banner should both have the provided text content
 		const titleEl = element.shadowRoot.querySelector("h1");
-		expect(element.title).toBe(testTitle);
-		expect(titleEl.textContent).toBe(testTitle);
+		expect(titleEl.textContent).toBe("Static heading");
+		expect(element.shadowRoot.querySelector("div.typewriter")).toBeNull();
 
-		// The `subtitle` property getter, and the rendered `h2` in the banner should both have the provided text content
 		const subtitleEl = element.shadowRoot.querySelector("h2");
-		expect(element.subtitle).toBe(testSubtitle);
-		expect(subtitleEl.textContent).toBe(testSubtitle);
+		expect(subtitleEl.textContent).toBe("I am a subtitle");
 	});
 
-	it("should apply the typewriter effect when the property is updated", async () => {
-		element.typeWriterEffect = false;
+	it("should type and delete each title in turn, keeping the prefix fixed, looping back to the first", async () => {
+		jest.useFakeTimers();
+		// Typing speed is jittered with Math.random(); pinning it to 0.5
+		// collapses the jitter to exactly the base speed for a deterministic test.
+		jest.spyOn(Math, "random").mockReturnValue(0.5);
+		element.prefix = "hi, ";
+		element.titles = ["ab", "c"];
+
+		document.body.appendChild(element);
+		const titleEl = element.shadowRoot.querySelector("h1");
+
+		expect(element.shadowRoot.querySelector("div.typewriter")).toBeTruthy();
+
+		// Advancing fake timers runs the pending setTimeout synchronously, but
+		// LWC re-renders on a microtask, so each step needs a flush before
+		// the DOM reflects it.
+		jest.advanceTimersByTime(300); // initial pause, then types "a"
+		await Promise.resolve();
+		expect(titleEl.textContent).toBe("hi, a");
+
+		jest.advanceTimersByTime(90); // types "b"
+		await Promise.resolve();
+		expect(titleEl.textContent).toBe("hi, ab");
+
+		jest.advanceTimersByTime(1400); // pauses, then deletes "b" — not the prefix
+		await Promise.resolve();
+		expect(titleEl.textContent).toBe("hi, a");
+
+		jest.advanceTimersByTime(45); // deletes "a", exhausting the title
+		await Promise.resolve();
+		expect(titleEl.textContent).toBe("hi, ");
+
+		jest.advanceTimersByTime(300); // pauses, then types the next title
+		await Promise.resolve();
+		expect(titleEl.textContent).toBe("hi, c");
+	});
+
+	it("should show the first title in full, with no cursor, when the visitor prefers reduced motion", () => {
+		window.matchMedia = jest.fn().mockReturnValue({ matches: true });
+		element.prefix = "hello, ";
+		element.titles = ["world!", "friend!"];
+
 		document.body.appendChild(element);
 
-		// If typeWriterEffect is false, this querySelector shouldn't return anything
-		let typeWriterEl = element.shadowRoot.querySelector("div.typewriter");
-		expect(typeWriterEl).toBe(null);
+		const titleEl = element.shadowRoot.querySelector("h1");
+		expect(titleEl.textContent).toBe("hello, world!");
+		expect(
+			element.shadowRoot.querySelector("div.typewriter.static"),
+		).toBeTruthy();
+	});
 
-		// After updating the property, the selector should return the h1 element
-		element.typeWriterEffect = true;
+	it("should give the heading a stable accessible name that includes the prefix", () => {
+		element.prefix = "hello, ";
+		element.titles = ["world!", "friend!"];
+		document.body.appendChild(element);
 
+		const titleEl = element.shadowRoot.querySelector("h1");
+		expect(titleEl.getAttribute("aria-label")).toBe("hello, world!");
+	});
+
+	it("is accessible", async () => {
+		element.titles = ["I am a title"];
+		element.typeWriterEffect = false;
+		element.subtitle = "I am a subtitle";
+
+		document.body.appendChild(element);
 		await Promise.resolve();
-		typeWriterEl = element.shadowRoot.querySelector("div.typewriter");
-		expect(typeWriterEl).toBeTruthy();
+		await expect(element).toBeAccessible();
 	});
 
 	it("is accessible", async () => {

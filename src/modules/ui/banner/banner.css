@@ -1,90 +1,111 @@
+@import "base/designTokens";
+
 :host {
-	background-color: rgb(250, 250, 250);
+	box-sizing: border-box;
+	background-color: var(--portfolio-color-hero-bg);
+	background-image:
+		radial-gradient(
+			120% 140% at 100% 0%,
+			rgba(91, 127, 222, 0.32) 0%,
+			transparent 55%
+		),
+		radial-gradient(
+			120% 140% at 0% 100%,
+			rgba(255, 159, 90, 0.26) 0%,
+			transparent 55%
+		);
+	background-repeat: no-repeat;
+	background-size:
+		170% 170%,
+		170% 170%;
+	background-position:
+		0% 0%,
+		0% 0%;
+	animation: hero-drift 14s ease-in-out infinite alternate;
+	color: var(--portfolio-color-hero-fg);
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem 0.5rem 1rem 0.5rem;
-	transition: all 200ms ease-in-out;
-	height: 20rem;
-	background-image: url("public/assets/banner-background.webp");
-	background-size: cover;
-	background-position-x: left;
-	background-position-y: center;
-	background-clip: border-box;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 1.5rem;
+	height: 100%;
+	padding: 2rem 1.5rem;
+}
+
+/* Fills the banner's width (rather than shrinking to fit whichever phrase
+   is currently typed), capped at a comfortable reading width — below that
+   cap, `align-items: flex-end` on :host pulls it toward the banner's right
+   edge instead of it sitting flush left on very wide screens. */
+.banner-wrapper {
+	width: 100%;
+	max-width: 40rem;
 }
 
 h1 {
-	font-weight: 400;
-	font-size: 1.75rem;
-	transition: all 200ms ease-in-out;
+	margin: 0;
+	font-family: var(--portfolio-font-mono);
+	font-weight: var(--portfolio-font-weight-medium);
+	font-size: var(--portfolio-font-size-h1);
+	line-height: 1.2;
+	color: var(--portfolio-color-hero-fg);
+	/* Keeps the line's height stable even when the animated text is
+	   momentarily empty, instead of the box collapsing between phrases. */
+	min-height: 1.2em;
 }
 
-/* Typewriter effect referred to here: https://css-tricks.com/snippets/css/typewriter-effect/ */
-.typewriter h1 {
-	overflow: hidden; /* Ensures the content is not revealed until the animation */
-	border-right: 0.1em solid orange; /* The typwriter cursor */
-	white-space: nowrap; /* Keeps the content on a single line */
-	text-align: left;
-	font-family: monospace;
-	letter-spacing: 0.2em; /* Adjust as needed */
-	animation:
-		typing 4s steps(14, end),
-		blink-caret 0.75s step-end infinite;
-	color: antiquewhite;
-}
-
+/* A black terminal-style block behind the typed line — kept solid black
+   rather than the Ink token, since it needs to read as a terminal window
+   sitting on top of the hero, not just another shade of the hero itself.
+   It spans the full width of its container so it reads as a command line
+   rather than a caption hugging the text. */
 .typewriter {
-	background-color: rgba(0, 0, 0, 0.822);
-	padding: 1rem;
-	width: fit-content;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: var(--portfolio-radius-sm);
+	padding: 0.75rem 1rem;
+}
+
+.typewriter h1 {
+	/* Shrink-wraps to the current text (rather than filling the block-level
+	   default of 100% of `.typewriter`) so the cursor below sits right after
+	   the last typed character instead of stuck at the container's edge. */
+	display: inline-block;
+	max-width: 100%;
+	overflow: hidden; /* Guards against the longest phrase overflowing the box */
+	white-space: nowrap; /* Keeps the content on a single line */
+	border-right: 0.1em solid var(--portfolio-color-citrus); /* The typewriter cursor */
+	letter-spacing: 0.05em;
+	animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Visitors who've asked for reduced motion get the first phrase, typed out
+   in full, with no blinking cursor. */
+.typewriter.static h1 {
+	border-right-color: transparent;
+	animation: none;
 }
 
 h2 {
-	font-weight: 400;
-	font-size: 1.5rem;
-	font-family: monospace;
-	background-color: rgba(255, 255, 255, 0.808);
-	width: min-content;
-	padding: 0 0.5rem 0 0.5rem;
+	margin: 0;
+	font-family: var(--portfolio-font-mono);
+	font-weight: var(--portfolio-font-weight-regular);
+	font-size: var(--portfolio-font-size-h3);
+	color: var(--portfolio-color-hero-fg);
+	opacity: 0.85;
 }
 
-img {
-	max-height: 10rem;
-	border-radius: 2rem;
-	align-self: flex-end;
-}
-
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
 	:host {
-		padding: 2rem 4rem 2rem 4rem;
-		background-position-y: top;
-		height: 30rem;
+		padding: 3rem;
 	}
 
 	h1 {
-		font-weight: 400;
-		font-size: 3rem;
+		font-size: var(--portfolio-font-size-display);
 	}
 
 	h2 {
-		width: fit-content;
-	}
-}
-
-@media only screen and (min-width: 1600px) {
-	:host {
-		background-position-y: center; /* This keeps the image sensibly positoned at larger widths */
-	}
-}
-
-/* The typing effect */
-@keyframes typing {
-	from {
-		width: 0;
-	}
-	to {
-		width: 100%;
+		font-size: var(--portfolio-font-size-h2);
 	}
 }
 
@@ -95,18 +116,33 @@ img {
 		border-color: transparent;
 	}
 	50% {
-		border-color: rgba(249, 96, 30, 0.747);
+		border-color: var(--portfolio-color-citrus);
 	}
 }
 
-@media (prefers-color-scheme: dark) {
-	:host {
-		background-color: #14131b7c;
-		background-blend-mode: overlay;
+/* A drift of the two glows plus a shift in the base tone toward Sky, so the
+   hero has some ambient life to it rather than feeling static. */
+@keyframes hero-drift {
+	from {
+		background-color: var(--portfolio-color-hero-bg);
+		background-position:
+			0% 0%,
+			100% 100%;
 	}
+	to {
+		background-color: color-mix(
+			in srgb,
+			var(--portfolio-color-hero-bg) 72%,
+			var(--portfolio-color-sky) 28%
+		);
+		background-position:
+			30% 22%,
+			70% 78%;
+	}
+}
 
-	h2 {
-		background-color: rgba(40, 40, 40, 0.239);
-		color: #eee;
+@media (prefers-reduced-motion: reduce) {
+	:host {
+		animation: none;
 	}
 }
